@@ -1,0 +1,12 @@
+export const colors = {
+  primaryButton: '#60B5FF',
+  greyButton: '#E2E8F0',
+  solidButton: '#078CFF',
+  primaryText: '#334155',
+  successPrimary: '#10B981',
+  grey200: '#E2E8F0',
+  grey300: '#CBD5E1',
+  grey400: '#94A3B8',
+  grey500: '#64748B',
+  brand500: '#3B82F6',
+};
