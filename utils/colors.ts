@@ -8,5 +8,9 @@ export const colors = {
   grey300: '#CBD5E1',
   grey400: '#94A3B8',
   grey500: '#64748B',
+  grey700: '#334155',
   brand500: '#3B82F6',
+  imageBgColor: '#f6f4f8',
+  descColor: '#999999',
+  favColor: '#FF2D55',
 };

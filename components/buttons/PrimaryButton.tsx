@@ -4,12 +4,18 @@ import {colors} from '../../utils/colors';
 type PrimaryButtonProps = {
   label: string;
   onPress: () => void;
+  disable?: boolean;
 };
 
-const PrimaryButton = ({label, onPress}: PrimaryButtonProps) => {
+const PrimaryButton = ({label, onPress, disable}: PrimaryButtonProps) => {
   return (
-    <TouchableOpacity style={styles.button} onPress={onPress}>
-      <Text style={styles.label}>{label}</Text>
+    <TouchableOpacity
+      style={[styles.button, disable && {backgroundColor: colors.grey200}]}
+      onPress={onPress}
+      disabled={disable}>
+      <Text style={[styles.label, disable && {color: colors.grey500}]}>
+        {label}
+      </Text>
     </TouchableOpacity>
   );
 };

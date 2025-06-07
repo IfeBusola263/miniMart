@@ -1,7 +1,7 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {TabRoutes} from '../../routes';
-import TabHome from '../../../screens/TabHome';
-import CartScreen from '../../../screens/CartScreen';
+import TabHome from '../../../screens/home/TabHome';
+import CartScreen from '../../../screens/cart/CartScreen';
 import FavoritesScreen from '../../../screens/FavoritesScreen';
 import ProfileScreen from '../../../screens/ProfileScreen';
 import TabIconButton from '../../../components/buttons/TabIconButton';
@@ -12,6 +12,7 @@ import {
   UserCircleIcon,
 } from '@hugeicons/core-free-icons';
 import {colors} from '../../../utils/colors';
+import {useAppSelector} from '../../../hooks/sliceHooks';
 
 const Tab = createBottomTabNavigator();
 
@@ -33,6 +34,7 @@ const renderProfileIcon = ({focused}: tabBarIconProps) => (
 );
 
 const HomeTab = () => {
+  const {items} = useAppSelector(state => state.cart);
   return (
     <Tab.Navigator
       screenOptions={{
@@ -62,6 +64,13 @@ const HomeTab = () => {
         component={CartScreen}
         options={{
           tabBarIcon: renderCartIcon,
+          tabBarBadge: items.length,
+          tabBarBadgeStyle: {
+            backgroundColor: '#3C4856',
+            fontFamily: 'IBMPlexSans-Bold',
+            fontSize: 10.22,
+            lineHeight: 17.04,
+          },
         }}
       />
       <Tab.Screen

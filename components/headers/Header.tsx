@@ -2,10 +2,24 @@ import {Pressable, StyleSheet, Text, TextInput, View} from 'react-native';
 import {HugeiconsIcon} from '@hugeicons/react-native';
 import {NotificationIcon, SearchIcon} from '@hugeicons/core-free-icons';
 import {colors} from '../../utils/colors';
-import {useCallback, useRef} from 'react';
+import {useCallback, useEffect, useRef, useState} from 'react';
+import {useRoute} from '@react-navigation/native';
 
 const Header = () => {
   const inputRef = useRef<TextInput>(null);
+  const [isHome, setIsHome] = useState(true);
+  const {name} = useRoute();
+
+  useEffect(() => {
+    if (name === 'TabHome') {
+      setIsHome(true);
+      return;
+    }
+
+    setIsHome(false);
+  }, [name]);
+
+  // console.log(route.name);
 
   const handleFocus = useCallback(() => {
     if (inputRef.current) {
@@ -29,17 +43,20 @@ const Header = () => {
       <Text style={styles.address}>Umuezike Road, Oyo State</Text>
 
       {/* Search Input */}
-      <Pressable style={styles.searchInputContainer} onPress={handleFocus}>
-        <View style={styles.searchIcon}>
-          <HugeiconsIcon icon={SearchIcon} color={colors.grey400} />
-        </View>
-        <TextInput
-          ref={inputRef}
-          style={styles.searchInput}
-          placeholder="Search..."
-          placeholderTextColor={colors.grey300}
-        />
-      </Pressable>
+      {isHome && (
+        <Pressable style={styles.searchInputContainer} onPress={handleFocus}>
+          <View style={styles.searchIcon}>
+            <HugeiconsIcon icon={SearchIcon} color={colors.grey400} />
+          </View>
+
+          <TextInput
+            ref={inputRef}
+            style={styles.searchInput}
+            placeholder="Search..."
+            placeholderTextColor={colors.grey300}
+          />
+        </Pressable>
+      )}
     </View>
   );
 };
