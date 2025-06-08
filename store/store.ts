@@ -4,7 +4,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import CartReducer from './slices/cartSlice';
 
-
 // combine Reducers
 const rootReducer = combineReducers({
   cart: CartReducer,
@@ -38,4 +37,4 @@ export const persistor = persistStore(store);
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 
-persistor.purge();
+// persistor.purge();
