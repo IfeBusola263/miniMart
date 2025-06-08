@@ -77,23 +77,23 @@
 
 import {type Product} from '../screens/products/types';
 
-export const loadProducts = async (): Promise<Product[]> => {
-  const res = await fetch('https://dummyjson.com/products?limit=300');
-  const {products} = await res.json();
+// export const loadProducts = async (): Promise<Product[]> => {
+//   const res = await fetch('https://dummyjson.com/products?limit=300');
+//   const {products} = await res.json();
 
-  const transformed = products.map((product: any) => ({
-    id: product.id,
-    name: product.title, // ← map `title` to `name`
-    price: product.price,
-    description: product.description,
-    category: product.category,
-    image: product.thumbnail || product.image || '', // fallback
-  }));
+//   const transformed = products.map((product: any) => ({
+//     id: product.id,
+//     name: product.title, // ← map `title` to `name`
+//     price: product.price,
+//     description: product.description,
+//     category: product.category,
+//     image: product.thumbnail || product.image || '', // fallback
+//   }));
 
-  return transformed;
-};
+//   return transformed;
+// };
 
-export const products = [
+export const products: Product[] = [
   {
     id: 1,
     name: 'Essence Mascara Lash Princess',
