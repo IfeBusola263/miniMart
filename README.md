@@ -1,97 +1,65 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🛒 MiniMart – React Native App
 
-# Getting Started
+MiniMart is a mobile shopping experience demo app built with React Native. It showcases core mobile development skills like navigation, state management, persistent storage, component reuse, and icon integration using popular open-source tools.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## 🚀 Tech Stack
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### 🧱 Core Framework
+- **React Native** (v0.79.3)
+- **React** (v19)
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### 📦 Libraries & Tooling
+- **Navigation**: `@react-navigation/native`, `@react-navigation/bottom-tabs`, `@react-navigation/stack`, `@react-navigation/native-stack`
+- **State Management**: `@reduxjs/toolkit`, `react-redux`, `redux-persist`
+- **Icons**: `@fortawesome/react-native-fontawesome`, `@hugeicons/react-native`, `@hugeicons/core-free-icons`
+- **SVG Rendering**: `react-native-svg`
+- **Toasts**: `react-native-toast-message`
+- **Storage**: `@react-native-async-storage/async-storage`
 
-```sh
-# Using npm
-npm start
+### 🛠️ Development Tools
+- **TypeScript**
+- **ESLint** + **Prettier**
+- **Jest** (unit testing)
 
-# OR using Yarn
-yarn start
-```
+---
 
-## Step 2: Build and run your app
+## ⚙️ Setup & Run Instructions
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+> 📦 Requires **Node.js >=18** and either **Yarn** or **npm** installed globally.
 
-### Android
+### 1. Clone the Repository
 
-```sh
-# Using npm
+```bash
+git clone <your-repo-url>
+cd minimart
+
+### 2. Install dependencies
+yarn install
+# or
+npm install
+
+
+### 3. Run on Android
+# Ensure an Android emulator is running or a device is connected via USB.
+yarn android
+# or
 npm run android
 
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+### 4. Run on iOS (macOS only)
+# Requires Xcode and an iOS simulator or device.
+yarn ios
+# or
 npm run ios
 
-# OR using Yarn
-yarn ios
-```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+- Key Features
 
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- Smooth Bottom Tab Navigation
+- Product list with real-time state updates
+- Persistent favorites & cart using Redux Persist
+- Responsive icon integration (Hugeicons & FontAwesome)
+- User feedback via toast messages
+- Modular folder and component structure
