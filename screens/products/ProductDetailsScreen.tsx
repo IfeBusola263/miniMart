@@ -14,7 +14,7 @@ import Toast from 'react-native-toast-message';
 import {useAppDispatch, useAppSelector} from '../../hooks/sliceHooks';
 import {add} from '../../store/slices/cartSlice';
 
-type ProductScreenProps = NativeStackScreenProps<
+export type ProductScreenProps = NativeStackScreenProps<
   RootParamList,
   typeof StackRoutes.productDetails
 >;

@@ -5,12 +5,21 @@ import BackButton from '../../components/buttons/BackButton';
 // import {type NativeStackScreenProps} from '@react-navigation/native-stack';
 import {useCallback} from 'react';
 import Cart from './Cart';
+import {RootParamList, TabParamList} from '../../navigation/types';
+import {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
+import {TabRoutes} from '../../navigation/routes';
+import {CompositeScreenProps} from '@react-navigation/native';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
-// const CartScreenProps = Na
+// Use composite props, so that nested navigator will have access to
+// Parent navigator.
 
-const CartScreen = ({navigation}) => {
-  // console.log(items[0]);
+type CartScreenProps = CompositeScreenProps<
+  BottomTabScreenProps<TabParamList, typeof TabRoutes.cart>,
+  NativeStackScreenProps<RootParamList>
+>;
 
+const CartScreen = ({navigation}: CartScreenProps) => {
   const handleGoBack = useCallback(() => {
     navigation.goBack();
     // eslint-disable-next-line react-hooks/exhaustive-deps

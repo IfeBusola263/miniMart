@@ -9,7 +9,7 @@ import {persistor, store} from './store/store';
 import {Provider} from 'react-redux';
 
 const toastConfig = {
-  customToast: ({text1}: {text1: string}) => <CustomToast text={text1} />,
+  customToast: ({text1}: {text1?: string}) => <CustomToast text={text1} />,
 };
 
 const App = (): React.JSX.Element => {

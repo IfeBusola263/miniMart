@@ -13,6 +13,7 @@ const ProductList = () => {
       renderItem={renderItem}
       numColumns={2}
       columnWrapperStyle={styles.column}
+      showsVerticalScrollIndicator={false}
     />
   );
 };

@@ -1,4 +1,4 @@
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {FlatList, Pressable, StyleSheet, Text, View} from 'react-native';
 import {useAppDispatch, useAppSelector} from '../../hooks/sliceHooks';
 import CartItem from './CartItem';
 import {
@@ -7,15 +7,24 @@ import {
 } from '../../store/slices/cartSlice';
 import ItemPriceSummary from '../../components/cart/ItemPriceSumary';
 import PrimaryButton from '../../components/buttons/PrimaryButton';
-import {useNavigation} from '@react-navigation/native';
+import {CompositeNavigationProp, useNavigation} from '@react-navigation/native';
 import {useCallback} from 'react';
+import {TabRoutes} from '../../navigation/routes';
+import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
+import {RootParamList, TabParamList} from '../../navigation/types';
+import {StackNavigationProp} from '@react-navigation/stack';
+
+type CartScreenNavigationProps = CompositeNavigationProp<
+  BottomTabNavigationProp<TabParamList, typeof TabRoutes.tabHome>,
+  StackNavigationProp<RootParamList>
+>;
 
 const renderItem = ({item}: {item: CartItemProps}) => <CartItem {...item} />;
 
 const Cart = () => {
   const {items} = useAppSelector(state => state.cart);
   const dispatch = useAppDispatch();
-  const navigation = useNavigation();
+  const navigation = useNavigation<CartScreenNavigationProps>();
 
   const total = items
     .reduce((sum, item) => {
@@ -31,6 +40,17 @@ const Cart = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const renderEmptyCart = () => (
+    <View style={styles.emptyCartContainer}>
+      <Text style={styles.emptyTitle}>🛒 Your cart is empty</Text>
+      <Pressable onPress={() => navigation.navigate(TabRoutes.tabHome)}>
+        <Text style={styles.goBackText}>
+          Go back to the home page to add items
+        </Text>
+      </Pressable>
+    </View>
+  );
+
   return (
     <>
       <FlatList
@@ -38,6 +58,7 @@ const Cart = () => {
         data={items}
         renderItem={renderItem}
         showsVerticalScrollIndicator={false}
+        ListEmptyComponent={renderEmptyCart}
       />
 
       {/* Cart Summary */}
@@ -64,6 +85,21 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 20,
   },
+  emptyCartContainer: {
+    alignItems: 'center',
+  },
+  emptyTitle: {
+    fontSize: 18,
+    fontFamily: 'IBMPlexSans-Bold',
+    marginBottom: 10,
+    color: '#333333',
+  },
+  goBackText: {
+    fontSize: 16,
+    fontFamily: 'IBMPlexSans-Regular',
+    color: '#007bff',
+    textDecorationLine: 'underline',
+  },
   summaryHeader: {
     fontFamily: 'IBMPlexSans-Bold',
     fontSize: 14,
@@ -72,5 +108,10 @@ const styles = StyleSheet.create({
     gap: 15,
     paddingVertical: 10,
     paddingHorizontal: 20,
+  },
+  emptyCart: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
   },
 });

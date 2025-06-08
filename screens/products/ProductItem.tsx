@@ -1,12 +1,19 @@
-import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
+import {Image, Pressable, StyleSheet, Text} from 'react-native';
 import {type Product} from './types';
 import {useNavigation} from '@react-navigation/native';
 import {useCallback} from 'react';
 import {StackRoutes} from '../../navigation/routes';
+import {RootParamList} from '../../navigation/types';
+import {StackNavigationProp} from '@react-navigation/stack';
+
+type ProductScreenNavigationProps = StackNavigationProp<
+  RootParamList,
+  typeof StackRoutes.productDetails
+>;
 
 const ProductItem = (props: Product) => {
   const {image, name, price} = props;
-  const navigation = useNavigation();
+  const navigation = useNavigation<ProductScreenNavigationProps>();
 
   const handleViewProduct = useCallback(() => {
     navigation.navigate(StackRoutes.productDetails, {...props});

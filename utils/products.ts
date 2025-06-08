@@ -1,2179 +1,2037 @@
-// export const products = [
-//   {
-//     id: '9325c678-8697-4e6e-91f8-9983505c4cfd',
-//     category: 'Electronics',
-//     name: 'Smart Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Lamp',
-//     price: 982.22,
-//   },
-//   {
-//     id: 'fc7c05b6-5d79-4562-a5f0-5c81daa6e589',
-//     category: 'Home & Kitchen',
-//     name: 'Premium Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Keyboard',
-//     price: 213.49,
-//   },
-//   {
-//     id: '5ab84fa8-dd41-4322-989d-afa9279895d2',
-//     category: 'Clothing',
-//     name: 'Compact Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Speaker',
-//     price: 488.42,
-//   },
-//   {
-//     id: 'e2b0094c-ffd5-4474-bec5-c9fd92ebbe0f',
-//     category: 'Home & Kitchen',
-//     name: 'Deluxe Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Pen',
-//     price: 41.89,
-//   },
-//   {
-//     id: '7c3d3326-cdf0-4961-a3eb-8f66f85d28f2',
-//     category: 'Health',
-//     name: 'Smart Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Pen',
-//     price: 928.75,
-//   },
-//   {
-//     id: '7a4ebd9c-70d6-4236-ab4d-0c464c92825a',
-//     category: 'Toys',
-//     name: 'Portable Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Camera',
-//     price: 23.5,
-//   },
-//   {
-//     id: 'da8bf4b5-5417-434b-b866-59e9faec92d7',
-//     category: 'Health',
-//     name: 'Advanced Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Speaker',
-//     price: 457.28,
-//   },
-//   {
-//     id: '3b901f75-5e53-40ff-9dd3-9fe3fcb69a7f',
-//     category: 'Clothing',
-//     name: 'Smart Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Pen',
-//     price: 509.4,
-//   },
-//   {
-//     id: '7d35dce3-6e06-47cb-8193-f988ec65a971',
-//     category: 'Garden',
-//     name: 'Advanced Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Speaker',
-//     price: 61.41,
-//   },
-//   {
-//     id: 'eaf82f42-d186-449c-83d5-ba357204269e',
-//     category: 'Office',
-//     name: 'Durable Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Camera',
-//     price: 830.99,
-//   },
-//   {
-//     id: 'f692c063-88d2-4d07-a108-b1cd57392054',
-//     category: 'Grocery',
-//     name: 'Premium Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Mic',
-//     price: 713.12,
-//   },
-//   {
-//     id: '67754f8f-98bf-4b6b-a6a0-9a6599ca7dc3',
-//     category: 'Electronics',
-//     name: 'Durable Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Keyboard',
-//     price: 116.83,
-//   },
-//   {
-//     id: '819ead03-15f3-4145-9602-9d314ea1dc98',
-//     category: 'Electronics',
-//     name: 'Premium Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Pen',
-//     price: 149.94,
-//   },
-//   {
-//     id: 'a8f7b412-412f-4196-a7b0-eae0418e1e9b',
-//     category: 'Garden',
-//     name: 'Compact Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Mug',
-//     price: 533.59,
-//   },
-//   {
-//     id: '9f14e5a7-efab-44d1-aae5-24006c98efe5',
-//     category: 'Home & Kitchen',
-//     name: 'Advanced Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Mug',
-//     price: 791.29,
-//   },
-//   {
-//     id: '596d2b2f-3662-40f6-9a11-76a315af6f65',
-//     category: 'Toys',
-//     name: 'Compact Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Mug',
-//     price: 176.12,
-//   },
-//   {
-//     id: 'ce735d2e-e75a-4dd9-8d4a-9813696eb5ec',
-//     category: 'Automotive',
-//     name: 'Advanced Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Speaker',
-//     price: 480.84,
-//   },
-//   {
-//     id: 'f6ea6305-9863-495f-a0eb-abaa9e4f285b',
-//     category: 'Sports',
-//     name: 'Wireless Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Pen',
-//     price: 70.5,
-//   },
-//   {
-//     id: '0b8111e1-fa7c-4a37-9be6-fdd4e2e31ba1',
-//     category: 'Health',
-//     name: 'Smart Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Keyboard',
-//     price: 833.1,
-//   },
-//   {
-//     id: 'cd74fa54-6b55-42c9-ac5b-e6f8aa39c16b',
-//     category: 'Sports',
-//     name: 'Eco Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Watch',
-//     price: 890.38,
-//   },
-//   {
-//     id: '69637d3b-7423-4a80-b2f2-e4fbed7af96a',
-//     category: 'Health',
-//     name: 'Advanced Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Pen',
-//     price: 66.12,
-//   },
-//   {
-//     id: '2ad7fc2f-a28e-4448-a2dd-52c3ff083daa',
-//     category: 'Books',
-//     name: 'Smart Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Keyboard',
-//     price: 348.77,
-//   },
-//   {
-//     id: '4f8b6f5f-8f16-4820-91ad-6a904f10af0c',
-//     category: 'Beauty',
-//     name: 'Advanced Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Mug',
-//     price: 803.44,
-//   },
-//   {
-//     id: 'e434ec3a-f2ef-4e08-9a9a-a9ff6eb2ad88',
-//     category: 'Toys',
-//     name: 'Wireless Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Watch',
-//     price: 496.62,
-//   },
-//   {
-//     id: 'd9da9452-6cbc-4000-99e7-f8866cb5b0da',
-//     category: 'Sports',
-//     name: 'Advanced Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Watch',
-//     price: 21.58,
-//   },
-//   {
-//     id: '21e60095-2ae8-4065-9b60-e816680fc7be',
-//     category: 'Garden',
-//     name: 'Advanced Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Blender',
-//     price: 424.95,
-//   },
-//   {
-//     id: 'bef7df24-ccc2-48ba-b134-df72ecafaec7',
-//     category: 'Books',
-//     name: 'Wireless Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Mug',
-//     price: 147.19,
-//   },
-//   {
-//     id: 'dd8afdc5-7b4d-4884-8db3-6f8052eef641',
-//     category: 'Sports',
-//     name: 'Compact Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Mug',
-//     price: 270.37,
-//   },
-//   {
-//     id: 'cd1c4a25-e9db-4bdd-b304-4bea02afd6f8',
-//     category: 'Garden',
-//     name: 'Deluxe Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Watch',
-//     price: 328.95,
-//   },
-//   {
-//     id: '494d8da1-9b3d-4007-888a-a5528642324f',
-//     category: 'Books',
-//     name: 'Eco Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Lamp',
-//     price: 141.2,
-//   },
-//   {
-//     id: '0a1ed875-b3cc-48c5-9ffe-d57dc452655d',
-//     category: 'Beauty',
-//     name: 'Deluxe Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Speaker',
-//     price: 64.1,
-//   },
-//   {
-//     id: '6ea05253-d239-47bb-a77b-ee61f6eb236f',
-//     category: 'Clothing',
-//     name: 'Premium Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Watch',
-//     price: 61.36,
-//   },
-//   {
-//     id: '9834b71d-b165-48b1-a073-36d08c5a53bb',
-//     category: 'Beauty',
-//     name: 'Durable Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Pen',
-//     price: 876.33,
-//   },
-//   {
-//     id: 'dc10a271-af77-4ad1-b32a-425fcf12d70b',
-//     category: 'Grocery',
-//     name: 'Advanced Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Mic',
-//     price: 997.97,
-//   },
-//   {
-//     id: '4c2c1efc-c7ad-4292-9bff-a910ee4daf0b',
-//     category: 'Toys',
-//     name: 'Durable Shoes',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Shoes',
-//     price: 59.27,
-//   },
-//   {
-//     id: '4a9477ec-d0cc-4148-81a7-bcd8ade0d32d',
-//     category: 'Office',
-//     name: 'Compact Shirt',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Shirt',
-//     price: 57.56,
-//   },
-//   {
-//     id: 'ff5d56c3-9afc-48de-9fcd-b6916e643f9b',
-//     category: 'Toys',
-//     name: 'Smart Shoes',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Shoes',
-//     price: 859.06,
-//   },
-//   {
-//     id: 'b064f3d4-3f2e-4b9f-a6c7-d51df40784a2',
-//     category: 'Beauty',
-//     name: 'Durable Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Lamp',
-//     price: 138.17,
-//   },
-//   {
-//     id: 'dcf1e55b-eb4f-4a23-a7d1-ace718d6be3c',
-//     category: 'Grocery',
-//     name: 'Deluxe Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Watch',
-//     price: 59.31,
-//   },
-//   {
-//     id: '41a1c0d1-b0f4-461d-831c-5d4805ed366c',
-//     category: 'Beauty',
-//     name: 'Compact Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Keyboard',
-//     price: 110.18,
-//   },
-//   {
-//     id: '0f3c6dea-2a98-4160-8ed6-4239002d0f9a',
-//     category: 'Music',
-//     name: 'Deluxe Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Watch',
-//     price: 509.58,
-//   },
-//   {
-//     id: '096532e5-0a3f-4c95-8384-4d285f702719',
-//     category: 'Books',
-//     name: 'Eco Headphones',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Headphones',
-//     price: 812.83,
-//   },
-//   {
-//     id: 'ab3e260e-20c7-4e22-8b1b-25f3f99f47bb',
-//     category: 'Garden',
-//     name: 'Durable Shirt',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Shirt',
-//     price: 458.31,
-//   },
-//   {
-//     id: '7c3ed8af-3075-431b-8c9a-a49646bfce4b',
-//     category: 'Automotive',
-//     name: 'Portable Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Mic',
-//     price: 266.35,
-//   },
-//   {
-//     id: '891090c9-b0b4-4237-adf3-3ce81073030f',
-//     category: 'Books',
-//     name: 'Advanced Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Blender',
-//     price: 520.07,
-//   },
-//   {
-//     id: '90535e11-9610-4ad1-a51b-1d45ec1d4e23',
-//     category: 'Clothing',
-//     name: 'Advanced Shoes',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Shoes',
-//     price: 691.15,
-//   },
-//   {
-//     id: 'a0061d70-cb2d-40a1-a178-e1a7c281b9b1',
-//     category: 'Books',
-//     name: 'Deluxe Shirt',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Shirt',
-//     price: 904.01,
-//   },
-//   {
-//     id: '1d1f2e30-9103-4c14-88cf-ab418d7cf28d',
-//     category: 'Toys',
-//     name: 'Premium Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Pen',
-//     price: 718.66,
-//   },
-//   {
-//     id: '6b0ecad8-b150-4abd-bb89-92237777a548',
-//     category: 'Office',
-//     name: 'Premium Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Speaker',
-//     price: 763.37,
-//   },
-//   {
-//     id: '83a95fcb-89a1-41c8-94a2-171429f46ecf',
-//     category: 'Music',
-//     name: 'Durable Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Camera',
-//     price: 684.71,
-//   },
-//   {
-//     id: 'e6cc7c53-5a6c-42a1-bc9a-f72fa003d415',
-//     category: 'Electronics',
-//     name: 'Smart Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Watch',
-//     price: 669.2,
-//   },
-//   {
-//     id: 'ca865a3d-779d-40d5-b898-0ca7335289dc',
-//     category: 'Toys',
-//     name: 'Smart Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Blender',
-//     price: 976.7,
-//   },
-//   {
-//     id: '45fba136-244f-491c-918c-20ae8f757a4d',
-//     category: 'Electronics',
-//     name: 'Compact Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Speaker',
-//     price: 429.85,
-//   },
-//   {
-//     id: '69df0775-a817-45be-a529-e72f9fdd014b',
-//     category: 'Home & Kitchen',
-//     name: 'Premium Shoes',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Shoes',
-//     price: 260.21,
-//   },
-//   {
-//     id: 'bdc6d79c-8549-4493-b4f3-b0166b634a71',
-//     category: 'Beauty',
-//     name: 'Portable Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Keyboard',
-//     price: 188.68,
-//   },
-//   {
-//     id: '03e02a96-32fa-492f-ab72-02ae1b823547',
-//     category: 'Beauty',
-//     name: 'Eco Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Mug',
-//     price: 446.81,
-//   },
-//   {
-//     id: 'cb57ae37-84ae-48a1-b4e5-d536b69af6ae',
-//     category: 'Books',
-//     name: 'Classic Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Pen',
-//     price: 735.23,
-//   },
-//   {
-//     id: 'f3e381e8-e859-4198-a852-37d2375bfb81',
-//     category: 'Grocery',
-//     name: 'Portable Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Chair',
-//     price: 806.47,
-//   },
-//   {
-//     id: '0f4b3040-20d1-44dd-9f7a-e2bbf5f32583',
-//     category: 'Health',
-//     name: 'Advanced Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Speaker',
-//     price: 742.25,
-//   },
-//   {
-//     id: 'ac7ebe94-ab8d-42c8-ba9e-1000fb9b70f0',
-//     category: 'Music',
-//     name: 'Advanced Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Camera',
-//     price: 357.6,
-//   },
-//   {
-//     id: 'd16b319d-eaf4-40c6-a3e9-b77f4a5ebcd4',
-//     category: 'Health',
-//     name: 'Wireless Headphones',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Headphones',
-//     price: 896.97,
-//   },
-//   {
-//     id: 'a5615c5e-ae24-458b-be6e-dff81f8954ba',
-//     category: 'Clothing',
-//     name: 'Smart Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Keyboard',
-//     price: 804.57,
-//   },
-//   {
-//     id: 'f5efd2e2-a2cb-44c3-8123-504329840818',
-//     category: 'Sports',
-//     name: 'Advanced Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Pen',
-//     price: 596.8,
-//   },
-//   {
-//     id: '9a1a7ec0-f85a-4186-ba34-39eb9e22bf3d',
-//     category: 'Home & Kitchen',
-//     name: 'Portable Headphones',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Headphones',
-//     price: 656.36,
-//   },
-//   {
-//     id: '443b29b8-95f9-46d2-aa74-4afe0fde114c',
-//     category: 'Automotive',
-//     name: 'Portable Headphones',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Headphones',
-//     price: 275.03,
-//   },
-//   {
-//     id: '9cc5ef5f-9b8c-4f67-b8c7-8e32d85a0e10',
-//     category: 'Home & Kitchen',
-//     name: 'Premium Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Mug',
-//     price: 518.65,
-//   },
-//   {
-//     id: '3b0905c8-b5aa-4aa3-89e4-a5449794e234',
-//     category: 'Beauty',
-//     name: 'Compact Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Mug',
-//     price: 610.22,
-//   },
-//   {
-//     id: '25c3ca7a-b843-45b4-bb95-716bc313e524',
-//     category: 'Health',
-//     name: 'Classic Headphones',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Headphones',
-//     price: 691.52,
-//   },
-//   {
-//     id: 'b6ba8d33-970c-4365-8806-309180669053',
-//     category: 'Toys',
-//     name: 'Premium Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Watch',
-//     price: 749.84,
-//   },
-//   {
-//     id: '7be4bb14-18e1-4446-8aa1-a74a86ec586e',
-//     category: 'Health',
-//     name: 'Compact Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Camera',
-//     price: 513.03,
-//   },
-//   {
-//     id: '9a0ab9c9-0e2d-410b-a84c-ed98308532e3',
-//     category: 'Books',
-//     name: 'Wireless Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Speaker',
-//     price: 352.75,
-//   },
-//   {
-//     id: 'fa8f6e1c-0167-4f61-8000-467fb42e02f5',
-//     category: 'Health',
-//     name: 'Classic Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Speaker',
-//     price: 66.06,
-//   },
-//   {
-//     id: 'a3fc341a-aeaa-4923-9748-66d9130db2e8',
-//     category: 'Music',
-//     name: 'Wireless Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Blender',
-//     price: 401.25,
-//   },
-//   {
-//     id: 'a68e4457-1291-493d-ad3c-a2e1c1709f50',
-//     category: 'Office',
-//     name: 'Wireless Headphones',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Headphones',
-//     price: 765.75,
-//   },
-//   {
-//     id: 'a152857e-32dd-45ef-825a-f3f248d6ed04',
-//     category: 'Office',
-//     name: 'Classic Shirt',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Shirt',
-//     price: 86.31,
-//   },
-//   {
-//     id: '498dfd69-ef8a-4606-9bf0-7dd5cf7d1ffb',
-//     category: 'Home & Kitchen',
-//     name: 'Premium Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Mug',
-//     price: 433.55,
-//   },
-//   {
-//     id: '29b4c928-2c68-4bd5-b34b-5a40cd37d12f',
-//     category: 'Health',
-//     name: 'Advanced Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Keyboard',
-//     price: 745.76,
-//   },
-//   {
-//     id: '3d34e00e-ed9f-49db-bd12-7a650077abc7',
-//     category: 'Garden',
-//     name: 'Compact Shirt',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Shirt',
-//     price: 40.32,
-//   },
-//   {
-//     id: '60ca76ce-f692-490a-835f-c8efd889157e',
-//     category: 'Home & Kitchen',
-//     name: 'Wireless Shoes',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Shoes',
-//     price: 495.55,
-//   },
-//   {
-//     id: 'ec2f2d6c-5b73-464c-a226-208e527c205b',
-//     category: 'Toys',
-//     name: 'Premium Shirt',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Shirt',
-//     price: 194.18,
-//   },
-//   {
-//     id: 'b577affd-3dc3-4264-a0c7-2219105dc6b7',
-//     category: 'Office',
-//     name: 'Compact Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Chair',
-//     price: 926.13,
-//   },
-//   {
-//     id: '0e484af6-0989-4166-987a-5cb7689d15ae',
-//     category: 'Health',
-//     name: 'Premium Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Camera',
-//     price: 592.01,
-//   },
-//   {
-//     id: 'bcb4ef85-8f09-491b-bd82-7354b95128ff',
-//     category: 'Grocery',
-//     name: 'Wireless Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Blender',
-//     price: 431.11,
-//   },
-//   {
-//     id: 'f2ccdb5e-9c06-4986-988e-1e776a06c367',
-//     category: 'Sports',
-//     name: 'Portable Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Lamp',
-//     price: 707.35,
-//   },
-//   {
-//     id: 'a34d888d-3c0f-4b0a-8844-3c7c9ddff957',
-//     category: 'Music',
-//     name: 'Portable Shoes',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Shoes',
-//     price: 671.08,
-//   },
-//   {
-//     id: '45a66a51-62cf-4a77-a555-c251d98d77d9',
-//     category: 'Music',
-//     name: 'Eco Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Mug',
-//     price: 803.89,
-//   },
-//   {
-//     id: 'd1e7ce1e-a65c-4cd8-8045-255a1ea09d28',
-//     category: 'Automotive',
-//     name: 'Advanced Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Lamp',
-//     price: 372.96,
-//   },
-//   {
-//     id: 'cd3d4dd6-3475-4a43-95e8-4fd66e160a2c',
-//     category: 'Office',
-//     name: 'Durable Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Pen',
-//     price: 867.92,
-//   },
-//   {
-//     id: '241afbd4-cb90-408d-ae1e-d9e05bbfd822',
-//     category: 'Toys',
-//     name: 'Durable Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Pen',
-//     price: 222.54,
-//   },
-//   {
-//     id: '32578116-a5fb-45e7-b621-18cca8d56305',
-//     category: 'Garden',
-//     name: 'Portable Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Blender',
-//     price: 977.64,
-//   },
-//   {
-//     id: 'd9c3daf3-e9ae-4697-8805-7d8bbcb23c1a',
-//     category: 'Office',
-//     name: 'Classic Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Mic',
-//     price: 203.06,
-//   },
-//   {
-//     id: 'bd539566-fd77-43b2-9636-77ab7699a174',
-//     category: 'Music',
-//     name: 'Smart Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Pen',
-//     price: 340.1,
-//   },
-//   {
-//     id: 'f47ea593-c309-4f81-afdd-4dca5a498ec2',
-//     category: 'Electronics',
-//     name: 'Compact Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Keyboard',
-//     price: 974.43,
-//   },
-//   {
-//     id: '8892897e-dcca-4ad6-83a6-5a37833acb21',
-//     category: 'Toys',
-//     name: 'Deluxe Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Chair',
-//     price: 314.19,
-//   },
-//   {
-//     id: '1af9b6dd-320c-43a3-a3a0-eca06aed9972',
-//     category: 'Sports',
-//     name: 'Classic Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Watch',
-//     price: 996.36,
-//   },
-//   {
-//     id: 'f9e6d4da-b7e0-4db6-ae7d-c535108b83dd',
-//     category: 'Health',
-//     name: 'Premium Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Lamp',
-//     price: 783.63,
-//   },
-//   {
-//     id: '19e760f1-535e-4b57-84f0-6f6b05ae4085',
-//     category: 'Office',
-//     name: 'Durable Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Keyboard',
-//     price: 134.16,
-//   },
-//   {
-//     id: 'fa61ed8b-66a2-4a63-8c12-7301be9870c6',
-//     category: 'Toys',
-//     name: 'Wireless Shirt',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Shirt',
-//     price: 368.16,
-//   },
-//   {
-//     id: 'be5e4964-e7ad-4d7b-b18f-47fb28c6963c',
-//     category: 'Sports',
-//     name: 'Smart Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Mug',
-//     price: 42.72,
-//   },
-//   {
-//     id: 'f0fd8fce-e57c-4a85-ae25-fb26c87fea39',
-//     category: 'Automotive',
-//     name: 'Portable Shoes',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Shoes',
-//     price: 940.88,
-//   },
-//   {
-//     id: 'e28258f3-9179-4601-901b-de5b4be42159',
-//     category: 'Beauty',
-//     name: 'Advanced Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Mic',
-//     price: 652.6,
-//   },
-//   {
-//     id: 'c58e0ccf-5b86-45ee-958c-7ed5bfd2f88d',
-//     category: 'Garden',
-//     name: 'Deluxe Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Mug',
-//     price: 812.89,
-//   },
-//   {
-//     id: '7152089d-d6a1-44cb-8ab3-22b60592d1f6',
-//     category: 'Sports',
-//     name: 'Durable Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Chair',
-//     price: 635.82,
-//   },
-//   {
-//     id: '1fd88179-b370-4f55-b1a6-9cfc04ad4837',
-//     category: 'Garden',
-//     name: 'Advanced Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Lamp',
-//     price: 468.25,
-//   },
-//   {
-//     id: '5a55aac0-d0c3-43b9-9acb-a1bae795b95b',
-//     category: 'Toys',
-//     name: 'Compact Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Camera',
-//     price: 722.07,
-//   },
-//   {
-//     id: '9f8a5fa0-be11-47ca-93b2-0d65562bed0f',
-//     category: 'Health',
-//     name: 'Wireless Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Speaker',
-//     price: 191.51,
-//   },
-//   {
-//     id: 'd3802214-c8d7-4c82-9247-065620d2a289',
-//     category: 'Grocery',
-//     name: 'Deluxe Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Mug',
-//     price: 318.05,
-//   },
-//   {
-//     id: '889e3a9d-c2d9-450f-9b14-9424adbf6f46',
-//     category: 'Books',
-//     name: 'Eco Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Mic',
-//     price: 304.73,
-//   },
-//   {
-//     id: '677e937a-41cd-47f1-bb33-51c80c721f7c',
-//     category: 'Electronics',
-//     name: 'Classic Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Pen',
-//     price: 600.05,
-//   },
-//   {
-//     id: '15711263-e7ff-42fe-a944-89d2e4251b20',
-//     category: 'Health',
-//     name: 'Smart Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Speaker',
-//     price: 784.47,
-//   },
-//   {
-//     id: 'd52295b5-debb-432b-b0fd-fa74b9b705fd',
-//     category: 'Toys',
-//     name: 'Wireless Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Lamp',
-//     price: 136.79,
-//   },
-//   {
-//     id: '32d15fd5-1084-4882-8e54-d810ab77410d',
-//     category: 'Grocery',
-//     name: 'Compact Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Keyboard',
-//     price: 498.36,
-//   },
-//   {
-//     id: '54a5a032-71a3-4c53-ba3a-d6ce2acb7a25',
-//     category: 'Music',
-//     name: 'Durable Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Camera',
-//     price: 977.55,
-//   },
-//   {
-//     id: 'bb3e3b3e-698c-49e9-8638-a1df30da424b',
-//     category: 'Office',
-//     name: 'Advanced Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Lamp',
-//     price: 715.3,
-//   },
-//   {
-//     id: '4cbd99ce-ad16-44d4-b93e-72d7bb625836',
-//     category: 'Automotive',
-//     name: 'Classic Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Mic',
-//     price: 397.47,
-//   },
-//   {
-//     id: '92608fc8-28d6-488d-aafa-88593d464a7a',
-//     category: 'Books',
-//     name: 'Wireless Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Speaker',
-//     price: 107.47,
-//   },
-//   {
-//     id: '979d802a-65b4-4b31-8ed7-a098df6312b5',
-//     category: 'Garden',
-//     name: 'Deluxe Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Mug',
-//     price: 941.45,
-//   },
-//   {
-//     id: 'adeca7b6-f50f-45b5-93d7-c4e0a813221f',
-//     category: 'Grocery',
-//     name: 'Wireless Shirt',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Shirt',
-//     price: 65.83,
-//   },
-//   {
-//     id: '0915b397-9bd7-4b28-93e9-cb2837375c54',
-//     category: 'Beauty',
-//     name: 'Classic Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Pen',
-//     price: 344.49,
-//   },
-//   {
-//     id: 'f195e7b7-3e8c-448a-b5e8-d7b035c7cb69',
-//     category: 'Health',
-//     name: 'Advanced Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Lamp',
-//     price: 405.84,
-//   },
-//   {
-//     id: '636dbaf8-6522-41fb-b70d-4cf63582424f',
-//     category: 'Automotive',
-//     name: 'Eco Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Watch',
-//     price: 907.37,
-//   },
-//   {
-//     id: '8ddf5c39-d4fb-446e-a784-197ba2ba4c0c',
-//     category: 'Sports',
-//     name: 'Advanced Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Mic',
-//     price: 858.18,
-//   },
-//   {
-//     id: '9f19a5d6-1d71-4ec1-a06b-e30174f24912',
-//     category: 'Toys',
-//     name: 'Advanced Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Pen',
-//     price: 767.04,
-//   },
-//   {
-//     id: '5c91e1ad-c4f6-4aa8-8dfe-f7f79a1dcd5c',
-//     category: 'Clothing',
-//     name: 'Smart Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Pen',
-//     price: 688.16,
-//   },
-//   {
-//     id: '5fe9e7d3-e645-442a-86a9-059a06386750',
-//     category: 'Clothing',
-//     name: 'Durable Headphones',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Headphones',
-//     price: 18.54,
-//   },
-//   {
-//     id: 'e1678fe8-1d91-46db-b70d-d5740fafd4c1',
-//     category: 'Sports',
-//     name: 'Eco Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Watch',
-//     price: 120.58,
-//   },
-//   {
-//     id: '2a244adc-4ca1-4a94-a967-e9c4294d30d8',
-//     category: 'Garden',
-//     name: 'Premium Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Chair',
-//     price: 573.84,
-//   },
-//   {
-//     id: 'a1dd078d-e72a-401b-b86f-f6f05630862a',
-//     category: 'Books',
-//     name: 'Premium Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Lamp',
-//     price: 662.94,
-//   },
-//   {
-//     id: 'ad98ca83-7639-4bc2-8a04-ca4d92c35fe5',
-//     category: 'Office',
-//     name: 'Eco Shirt',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Shirt',
-//     price: 443.44,
-//   },
-//   {
-//     id: '553fbd04-2347-44b4-82dd-f87be7b2dbf4',
-//     category: 'Office',
-//     name: 'Wireless Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Pen',
-//     price: 155.32,
-//   },
-//   {
-//     id: '306c1bfd-a68b-4821-8f13-97bf4f7ab1ba',
-//     category: 'Office',
-//     name: 'Advanced Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Camera',
-//     price: 321.43,
-//   },
-//   {
-//     id: '9bb113ca-91ad-4fa5-81f7-d25db12eec23',
-//     category: 'Beauty',
-//     name: 'Premium Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Lamp',
-//     price: 265.52,
-//   },
-//   {
-//     id: '9be6a7a6-8b87-45e4-a56b-afc692d7afab',
-//     category: 'Books',
-//     name: 'Deluxe Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Keyboard',
-//     price: 790.95,
-//   },
-//   {
-//     id: '925bcc8f-f977-48c3-a545-275bd8df1ad6',
-//     category: 'Health',
-//     name: 'Smart Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Camera',
-//     price: 201.16,
-//   },
-//   {
-//     id: '8e645702-9a8b-44a8-864d-82122d7044b6',
-//     category: 'Garden',
-//     name: 'Smart Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Speaker',
-//     price: 511.92,
-//   },
-//   {
-//     id: 'd5253373-4c5d-4ab7-9b14-48e654e1942d',
-//     category: 'Sports',
-//     name: 'Compact Shoes',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Shoes',
-//     price: 125.08,
-//   },
-//   {
-//     id: '19d0180b-bd57-441b-9a6b-7580a0688914',
-//     category: 'Health',
-//     name: 'Portable Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Mic',
-//     price: 744.9,
-//   },
-//   {
-//     id: '702e3337-7edb-4a5c-a110-1e394acd4ee8',
-//     category: 'Clothing',
-//     name: 'Wireless Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Watch',
-//     price: 227.58,
-//   },
-//   {
-//     id: 'c8e70962-9a32-4cc1-8f45-b78d88ba7c27',
-//     category: 'Books',
-//     name: 'Deluxe Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Blender',
-//     price: 358.66,
-//   },
-//   {
-//     id: '7a74db81-d35b-43b9-b952-f89471a07500',
-//     category: 'Electronics',
-//     name: 'Compact Shoes',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Shoes',
-//     price: 673.91,
-//   },
-//   {
-//     id: '0f878cfe-c8a2-49e5-befb-6660217bb4cb',
-//     category: 'Home & Kitchen',
-//     name: 'Premium Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Pen',
-//     price: 605.74,
-//   },
-//   {
-//     id: 'c1129e2f-9e76-45c5-9e15-f989dfbaf1d2',
-//     category: 'Sports',
-//     name: 'Durable Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Camera',
-//     price: 138.84,
-//   },
-//   {
-//     id: '9e25617d-361c-4ca3-a24b-361b0a1fb758',
-//     category: 'Automotive',
-//     name: 'Smart Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Camera',
-//     price: 196.72,
-//   },
-//   {
-//     id: 'c42ed492-6d0f-4f81-856f-bd335c635223',
-//     category: 'Garden',
-//     name: 'Compact Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Mic',
-//     price: 973.88,
-//   },
-//   {
-//     id: 'a767252b-7dd5-49e7-a210-1ee0b1c7035d',
-//     category: 'Sports',
-//     name: 'Durable Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Watch',
-//     price: 127.23,
-//   },
-//   {
-//     id: '78ac41d9-11b6-4ead-9dfb-f478172bf7bb',
-//     category: 'Books',
-//     name: 'Wireless Headphones',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Headphones',
-//     price: 716.04,
-//   },
-//   {
-//     id: 'e17ab65a-43e0-4e60-bd8a-4c4bb7edbde7',
-//     category: 'Clothing',
-//     name: 'Classic Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Keyboard',
-//     price: 87.23,
-//   },
-//   {
-//     id: 'c739e14b-e811-4075-bda4-5f5c41ef4e48',
-//     category: 'Toys',
-//     name: 'Classic Headphones',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Headphones',
-//     price: 847.89,
-//   },
-//   {
-//     id: '031a4997-3644-439e-a88d-28944b73f9e8',
-//     category: 'Clothing',
-//     name: 'Smart Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Keyboard',
-//     price: 285.5,
-//   },
-//   {
-//     id: 'bc8dc5ad-fe85-41ea-8ba1-0e16841ecea0',
-//     category: 'Grocery',
-//     name: 'Durable Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Lamp',
-//     price: 104.03,
-//   },
-//   {
-//     id: '99dea299-a42f-487e-9107-5acc7ff21b94',
-//     category: 'Office',
-//     name: 'Portable Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Keyboard',
-//     price: 493.5,
-//   },
-//   {
-//     id: '560ef849-1691-4bdb-a600-5cb3d492abc0',
-//     category: 'Home & Kitchen',
-//     name: 'Durable Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Lamp',
-//     price: 722.98,
-//   },
-//   {
-//     id: '8c2118b2-fa6a-4ef4-a124-fd51dd96f203',
-//     category: 'Health',
-//     name: 'Premium Headphones',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Headphones',
-//     price: 21.54,
-//   },
-//   {
-//     id: '240151c6-9ec2-49b4-af4f-9bba63796632',
-//     category: 'Sports',
-//     name: 'Wireless Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Pen',
-//     price: 86.92,
-//   },
-//   {
-//     id: 'c459bbfa-752a-4dba-8037-abd009dc855c',
-//     category: 'Beauty',
-//     name: 'Durable Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Mic',
-//     price: 306.87,
-//   },
-//   {
-//     id: '7e43e0ba-4bb7-4fd9-add8-1b09009a3776',
-//     category: 'Health',
-//     name: 'Eco Shirt',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Shirt',
-//     price: 94.23,
-//   },
-//   {
-//     id: '3085bd2a-5b69-4137-ba70-d14863733621',
-//     category: 'Health',
-//     name: 'Wireless Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Camera',
-//     price: 482.63,
-//   },
-//   {
-//     id: 'd6cb97e1-d17c-47b7-86a5-7ae23ed5b419',
-//     category: 'Music',
-//     name: 'Durable Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Chair',
-//     price: 605.17,
-//   },
-//   {
-//     id: '4ed18cdf-29a6-40cb-81c5-bb844e6450de',
-//     category: 'Toys',
-//     name: 'Portable Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Speaker',
-//     price: 848.95,
-//   },
-//   {
-//     id: '77f37559-e57c-4c56-9a49-013e2283eb3f',
-//     category: 'Automotive',
-//     name: 'Premium Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Watch',
-//     price: 165.2,
-//   },
-//   {
-//     id: 'e3c47605-135d-4f12-b6bb-0bc5be70c197',
-//     category: 'Health',
-//     name: 'Compact Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Keyboard',
-//     price: 55.09,
-//   },
-//   {
-//     id: 'fe3cc5df-ca5c-4571-8520-435e8fce38b2',
-//     category: 'Home & Kitchen',
-//     name: 'Wireless Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Pen',
-//     price: 826.5,
-//   },
-//   {
-//     id: '264c826b-8664-49af-9e85-a8f91d7e032a',
-//     category: 'Electronics',
-//     name: 'Wireless Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Mic',
-//     price: 82.38,
-//   },
-//   {
-//     id: '48055956-ec84-4cf2-84bd-09cf94886adb',
-//     category: 'Toys',
-//     name: 'Portable Shoes',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Shoes',
-//     price: 466.85,
-//   },
-//   {
-//     id: '327a6227-60c2-48ec-943c-0edc1d859ba6',
-//     category: 'Books',
-//     name: 'Eco Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Pen',
-//     price: 259.19,
-//   },
-//   {
-//     id: '1600bc16-9dab-4c4a-ad40-40ff27a208bf',
-//     category: 'Beauty',
-//     name: 'Compact Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Watch',
-//     price: 729.72,
-//   },
-//   {
-//     id: '9b857a92-e033-4a83-8eee-2a824094079d',
-//     category: 'Toys',
-//     name: 'Wireless Headphones',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Headphones',
-//     price: 535.74,
-//   },
-//   {
-//     id: '1ab8246a-43b6-4991-8821-5df3b8ea48f1',
-//     category: 'Beauty',
-//     name: 'Portable Shoes',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Shoes',
-//     price: 954.14,
-//   },
-//   {
-//     id: '7ef14053-bed8-491c-8b59-cc41a97fa77d',
-//     category: 'Sports',
-//     name: 'Classic Headphones',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Headphones',
-//     price: 24.33,
-//   },
-//   {
-//     id: 'a05867e3-7bf2-4f74-a752-835b3e50b4f8',
-//     category: 'Electronics',
-//     name: 'Advanced Shirt',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Shirt',
-//     price: 176.66,
-//   },
-//   {
-//     id: '5accdbff-8357-497f-932b-834073e9ace1',
-//     category: 'Office',
-//     name: 'Durable Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Pen',
-//     price: 142.1,
-//   },
-//   {
-//     id: '74fd6e76-9c43-4f8d-933b-5068e90a64b5',
-//     category: 'Clothing',
-//     name: 'Smart Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Camera',
-//     price: 344.74,
-//   },
-//   {
-//     id: '08630429-9900-4996-82b1-7fccc7d39658',
-//     category: 'Electronics',
-//     name: 'Deluxe Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Camera',
-//     price: 940.49,
-//   },
-//   {
-//     id: '76b5510e-419c-4123-bf5d-137b71a5e724',
-//     category: 'Grocery',
-//     name: 'Smart Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Camera',
-//     price: 462.77,
-//   },
-//   {
-//     id: '892f002f-250c-4d0e-9c6e-5c044514af8e',
-//     category: 'Sports',
-//     name: 'Portable Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Pen',
-//     price: 872.72,
-//   },
-//   {
-//     id: 'ae44f5d8-79ed-42d5-ae9b-5e1282ed7a88',
-//     category: 'Grocery',
-//     name: 'Compact Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Mic',
-//     price: 813.65,
-//   },
-//   {
-//     id: 'f62e0332-2469-49af-bdbd-d4a045e471d4',
-//     category: 'Beauty',
-//     name: 'Wireless Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Mic',
-//     price: 174.02,
-//   },
-//   {
-//     id: '772bf343-7f61-4489-bedc-1385b5d3dec7',
-//     category: 'Garden',
-//     name: 'Durable Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Camera',
-//     price: 639.84,
-//   },
-//   {
-//     id: '004eebbf-f0ea-454e-af37-dc60fced8b6c',
-//     category: 'Home & Kitchen',
-//     name: 'Portable Shoes',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Shoes',
-//     price: 826.48,
-//   },
-//   {
-//     id: '52f21d4b-71f8-4bd1-997f-91a82d64149d',
-//     category: 'Automotive',
-//     name: 'Eco Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Blender',
-//     price: 144.24,
-//   },
-//   {
-//     id: 'a9f3a73e-6253-40e6-bf2b-99b5355d1103',
-//     category: 'Clothing',
-//     name: 'Compact Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Blender',
-//     price: 709.85,
-//   },
-//   {
-//     id: 'c8422ea4-35e3-4d79-9f8f-6155b8b3a431',
-//     category: 'Automotive',
-//     name: 'Advanced Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Keyboard',
-//     price: 12.29,
-//   },
-//   {
-//     id: '15aaa6bf-cbf2-474d-962c-1ec2e6309bc3',
-//     category: 'Beauty',
-//     name: 'Deluxe Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Camera',
-//     price: 67.48,
-//   },
-//   {
-//     id: '34adb89b-c1d3-4169-a336-ebd2a841659d',
-//     category: 'Garden',
-//     name: 'Wireless Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Camera',
-//     price: 128.57,
-//   },
-//   {
-//     id: '7d87092d-da42-42be-936b-1bda095cea98',
-//     category: 'Office',
-//     name: 'Wireless Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Keyboard',
-//     price: 720.61,
-//   },
-//   {
-//     id: 'ceab6193-dd8b-4914-a3a2-793e3b4bb64c',
-//     category: 'Garden',
-//     name: 'Advanced Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Blender',
-//     price: 270.32,
-//   },
-//   {
-//     id: '70f26580-14cd-4f76-a9f2-3803916bb186',
-//     category: 'Books',
-//     name: 'Classic Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Keyboard',
-//     price: 313.13,
-//   },
-//   {
-//     id: '2f1893fc-ec2f-4194-83c5-be070420ae95',
-//     category: 'Grocery',
-//     name: 'Wireless Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Camera',
-//     price: 800.33,
-//   },
-//   {
-//     id: '8239570c-6b03-46d4-ae70-893bec20967f',
-//     category: 'Garden',
-//     name: 'Eco Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Chair',
-//     price: 602.74,
-//   },
-//   {
-//     id: 'f7883a72-fff4-44bf-9b2e-adc19d85edab',
-//     category: 'Health',
-//     name: 'Deluxe Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Chair',
-//     price: 685.72,
-//   },
-//   {
-//     id: 'b23ce639-125e-4a6d-a760-e17c06a7066d',
-//     category: 'Home & Kitchen',
-//     name: 'Smart Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Lamp',
-//     price: 100.27,
-//   },
-//   {
-//     id: 'c50548b1-2eb3-498b-8e4d-e8ddc28a2a08',
-//     category: 'Clothing',
-//     name: 'Durable Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Keyboard',
-//     price: 820.48,
-//   },
-//   {
-//     id: 'd57a6f17-a9e3-40e2-81b8-2362e60612ee',
-//     category: 'Garden',
-//     name: 'Smart Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Pen',
-//     price: 727.06,
-//   },
-//   {
-//     id: '51b151ce-0dd3-42e5-84ed-620ad8675be0',
-//     category: 'Grocery',
-//     name: 'Eco Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Lamp',
-//     price: 667.15,
-//   },
-//   {
-//     id: 'eba30fd7-9417-4c30-93b3-a99284ce2ab7',
-//     category: 'Office',
-//     name: 'Portable Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Watch',
-//     price: 851.6,
-//   },
-//   {
-//     id: '1c9b0823-d178-49d4-bbfe-35676991e31f',
-//     category: 'Grocery',
-//     name: 'Classic Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Pen',
-//     price: 536.16,
-//   },
-//   {
-//     id: '96253ac0-32b0-4de5-bdee-c00effad43c1',
-//     category: 'Electronics',
-//     name: 'Wireless Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Speaker',
-//     price: 581.11,
-//   },
-//   {
-//     id: '43cbf8ce-6f71-4217-b233-8ca6530d3a84',
-//     category: 'Electronics',
-//     name: 'Compact Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Mic',
-//     price: 375.44,
-//   },
-//   {
-//     id: '24428246-678d-403b-a29f-04222ae5bf82',
-//     category: 'Sports',
-//     name: 'Deluxe Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Lamp',
-//     price: 815.42,
-//   },
-//   {
-//     id: 'bf097fb0-9f34-406a-b21a-5977f3c1e191',
-//     category: 'Music',
-//     name: 'Deluxe Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Lamp',
-//     price: 512.18,
-//   },
-//   {
-//     id: '95a00434-a83b-4a75-8848-8f1bea601337',
-//     category: 'Electronics',
-//     name: 'Classic Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Camera',
-//     price: 222.99,
-//   },
-//   {
-//     id: '83e3a629-2479-4fec-88dd-57ac85d5c85c',
-//     category: 'Automotive',
-//     name: 'Classic Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Mug',
-//     price: 741.46,
-//   },
-//   {
-//     id: '38a0ace4-a5fb-49fa-a922-c9054da1ac42',
-//     category: 'Beauty',
-//     name: 'Premium Shirt',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Shirt',
-//     price: 335.6,
-//   },
-//   {
-//     id: 'f44b26dc-d3fb-4939-a30e-8ea526845d6c',
-//     category: 'Electronics',
-//     name: 'Portable Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Chair',
-//     price: 985.97,
-//   },
-//   {
-//     id: '2f6264dc-49d1-4552-b0ef-73cf00e96fcc',
-//     category: 'Garden',
-//     name: 'Deluxe Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Keyboard',
-//     price: 540.4,
-//   },
-//   {
-//     id: 'a18aeb1c-085d-42bf-87e7-922a7a9547ac',
-//     category: 'Clothing',
-//     name: 'Eco Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Mug',
-//     price: 794.4,
-//   },
-//   {
-//     id: '9175756c-eaff-42a1-8133-84d4a56c8b5e',
-//     category: 'Sports',
-//     name: 'Deluxe Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Chair',
-//     price: 836.75,
-//   },
-//   {
-//     id: '8feeb86e-8466-454e-a843-5e98dce40baf',
-//     category: 'Electronics',
-//     name: 'Portable Headphones',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Headphones',
-//     price: 99.04,
-//   },
-//   {
-//     id: '936d3095-fdbe-48b1-9ac3-981e00824779',
-//     category: 'Office',
-//     name: 'Durable Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Chair',
-//     price: 192.03,
-//   },
-//   {
-//     id: '1bc8043e-6ee8-43f8-aa1b-8468942a16e9',
-//     category: 'Electronics',
-//     name: 'Eco Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Watch',
-//     price: 453.83,
-//   },
-//   {
-//     id: '6d4a5f79-7d59-40a5-81ed-83d9131e8a36',
-//     category: 'Electronics',
-//     name: 'Compact Shirt',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Shirt',
-//     price: 592.71,
-//   },
-//   {
-//     id: '5e304c9f-5037-4bfa-903d-ba285e7e8937',
-//     category: 'Health',
-//     name: 'Advanced Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Watch',
-//     price: 196.14,
-//   },
-//   {
-//     id: '0306d458-9685-47ef-8e2a-6ad090c301ab',
-//     category: 'Health',
-//     name: 'Eco Watch',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Watch',
-//     price: 422.78,
-//   },
-//   {
-//     id: '9a7751b0-0923-42ce-9638-02098219350c',
-//     category: 'Music',
-//     name: 'Durable Shirt',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Shirt',
-//     price: 325.96,
-//   },
-//   {
-//     id: '506d9342-b7df-4a6d-8c6c-496138032819',
-//     category: 'Beauty',
-//     name: 'Classic Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Blender',
-//     price: 444.78,
-//   },
-//   {
-//     id: 'cbf5f975-1a2f-40c1-9bcb-1a8a71584252',
-//     category: 'Beauty',
-//     name: 'Wireless Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Mug',
-//     price: 257.57,
-//   },
-//   {
-//     id: '393199fa-20ee-4ae6-849f-2b7ba201eac9',
-//     category: 'Books',
-//     name: 'Eco Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Pen',
-//     price: 636.34,
-//   },
-//   {
-//     id: '90ac3f54-2097-4b10-8105-4149042a86b8',
-//     category: 'Beauty',
-//     name: 'Wireless Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Speaker',
-//     price: 868.87,
-//   },
-//   {
-//     id: '48ee40a2-0821-4798-887e-165412af6114',
-//     category: 'Health',
-//     name: 'Smart Shoes',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Shoes',
-//     price: 565.85,
-//   },
-//   {
-//     id: 'a0726259-9841-43cb-baf3-a7a8e7603fb5',
-//     category: 'Beauty',
-//     name: 'Advanced Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Lamp',
-//     price: 541.91,
-//   },
-//   {
-//     id: 'fce0180e-52be-47af-8085-3d833784c18b',
-//     category: 'Clothing',
-//     name: 'Classic Shirt',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Shirt',
-//     price: 157.91,
-//   },
-//   {
-//     id: 'c4c1f535-5577-4633-bcb1-2fc31a37bdab',
-//     category: 'Books',
-//     name: 'Eco Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Chair',
-//     price: 302.94,
-//   },
-//   {
-//     id: '4f02dbc8-b910-4e97-9f0f-9c7f3c241a5f',
-//     category: 'Clothing',
-//     name: 'Portable Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Pen',
-//     price: 499.21,
-//   },
-//   {
-//     id: '0346d0f6-85ef-4b69-9d3d-febbde12626b',
-//     category: 'Grocery',
-//     name: 'Advanced Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Mug',
-//     price: 34.85,
-//   },
-//   {
-//     id: '4fc5a72a-1857-4c67-af92-3ec305d30c2d',
-//     category: 'Sports',
-//     name: 'Eco Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Chair',
-//     price: 572.17,
-//   },
-//   {
-//     id: '245013fe-cd99-49a1-8c24-80bfb8b2dc1a',
-//     category: 'Books',
-//     name: 'Premium Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Mic',
-//     price: 817.2,
-//   },
-//   {
-//     id: '53615abd-2315-45c8-add8-2bb18b8d42d3',
-//     category: 'Toys',
-//     name: 'Classic Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Chair',
-//     price: 105.66,
-//   },
-//   {
-//     id: '0cffa132-9e20-47e2-aed1-cacfc981938b',
-//     category: 'Music',
-//     name: 'Wireless Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Blender',
-//     price: 533.2,
-//   },
-//   {
-//     id: '6a69973f-d5ad-48f0-b58e-9c66f3e23337',
-//     category: 'Music',
-//     name: 'Durable Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Mic',
-//     price: 25.78,
-//   },
-//   {
-//     id: '8fc02223-25c2-43cb-b0dc-31558b853063',
-//     category: 'Grocery',
-//     name: 'Compact Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Chair',
-//     price: 418.3,
-//   },
-//   {
-//     id: 'c3f1bd32-ea3e-41a1-9f7a-471133249826',
-//     category: 'Clothing',
-//     name: 'Deluxe Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Pen',
-//     price: 193.84,
-//   },
-//   {
-//     id: '42b24b5f-a9e6-40e8-b72f-946446b04ea0',
-//     category: 'Beauty',
-//     name: 'Advanced Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Speaker',
-//     price: 378.09,
-//   },
-//   {
-//     id: 'e1b6d584-9170-474b-99bd-b5df3105318d',
-//     category: 'Automotive',
-//     name: 'Compact Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Camera',
-//     price: 201.53,
-//   },
-//   {
-//     id: '41e0997b-4864-4985-95b5-9090bc32169a',
-//     category: 'Office',
-//     name: 'Deluxe Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Chair',
-//     price: 103.65,
-//   },
-//   {
-//     id: '3116d6e6-fcae-47e5-b445-4260698a2b54',
-//     category: 'Beauty',
-//     name: 'Classic Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Keyboard',
-//     price: 912.69,
-//   },
-//   {
-//     id: 'f4082c96-4cfe-4fba-b3d6-6bc1c528b6e9',
-//     category: 'Beauty',
-//     name: 'Advanced Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Blender',
-//     price: 261.74,
-//   },
-//   {
-//     id: 'fdbc2f0a-6abe-4953-b571-81fb9d910f9e',
-//     category: 'Toys',
-//     name: 'Deluxe Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Blender',
-//     price: 110.29,
-//   },
-//   {
-//     id: '77408920-9a94-492e-af18-18a9e6aa1095',
-//     category: 'Beauty',
-//     name: 'Eco Shirt',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Shirt',
-//     price: 758.66,
-//   },
-//   {
-//     id: 'ca40eb41-96e3-471b-9258-005b7eee4dc9',
-//     category: 'Health',
-//     name: 'Classic Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Chair',
-//     price: 201.08,
-//   },
-//   {
-//     id: 'd51aca42-b2e7-4f86-8674-4c07e2a4c495',
-//     category: 'Toys',
-//     name: 'Premium Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Pen',
-//     price: 855.86,
-//   },
-//   {
-//     id: '79902be3-796d-4c73-a3d5-265159edb2e0',
-//     category: 'Office',
-//     name: 'Portable Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Speaker',
-//     price: 581.47,
-//   },
-//   {
-//     id: 'cba2910c-5e42-4575-a46a-cc80317850c3',
-//     category: 'Office',
-//     name: 'Smart Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Speaker',
-//     price: 575.78,
-//   },
-//   {
-//     id: '2ee17ccc-5f77-44c8-8db6-83c259805833',
-//     category: 'Beauty',
-//     name: 'Wireless Headphones',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Headphones',
-//     price: 638.5,
-//   },
-//   {
-//     id: 'f38e6b3e-6e6c-41c1-9261-fc92026a5b1c',
-//     category: 'Clothing',
-//     name: 'Eco Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Pen',
-//     price: 274.1,
-//   },
-//   {
-//     id: '5160296b-3481-44bb-ab05-eb8ac19b3f43',
-//     category: 'Health',
-//     name: 'Eco Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Lamp',
-//     price: 248.85,
-//   },
-//   {
-//     id: '68c640be-7062-4f1c-b85b-da5ff0389cd1',
-//     category: 'Garden',
-//     name: 'Advanced Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Speaker',
-//     price: 568.73,
-//   },
-//   {
-//     id: '7834c4ec-34d8-49a2-bb05-1b312a6f565a',
-//     category: 'Electronics',
-//     name: 'Portable Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Lamp',
-//     price: 373.82,
-//   },
-//   {
-//     id: '37485b45-9721-45d0-9f5d-bb6bc57fa09e',
-//     category: 'Toys',
-//     name: 'Smart Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Speaker',
-//     price: 467.97,
-//   },
-//   {
-//     id: '0e205079-bd5e-4918-b81a-73e46036e940',
-//     category: 'Electronics',
-//     name: 'Portable Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Lamp',
-//     price: 504.0,
-//   },
-//   {
-//     id: 'bae830ce-53a1-4323-9815-37b3b22c7987',
-//     category: 'Books',
-//     name: 'Advanced Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Chair',
-//     price: 172.73,
-//   },
-//   {
-//     id: 'bc107374-bf60-4502-8104-7fabb61b4dc5',
-//     category: 'Music',
-//     name: 'Portable Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Mic',
-//     price: 351.71,
-//   },
-//   {
-//     id: '91f61519-7bf8-47d0-a6f9-6a90c25191aa',
-//     category: 'Clothing',
-//     name: 'Portable Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Pen',
-//     price: 671.44,
-//   },
-//   {
-//     id: '983ba348-cde8-4b1b-b429-693f269d2ca8',
-//     category: 'Garden',
-//     name: 'Classic Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Blender',
-//     price: 840.09,
-//   },
-//   {
-//     id: '1a46f3c9-f978-42a7-9e59-46c829eeb773',
-//     category: 'Home & Kitchen',
-//     name: 'Wireless Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Blender',
-//     price: 74.5,
-//   },
-//   {
-//     id: 'e13ca6db-7969-4c21-9436-4451be4b8c38',
-//     category: 'Home & Kitchen',
-//     name: 'Classic Lamp',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Lamp',
-//     price: 711.69,
-//   },
-//   {
-//     id: '2864b6a1-664d-4e90-ad67-b4b18b89a2c6',
-//     category: 'Automotive',
-//     name: 'Advanced Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Mic',
-//     price: 311.57,
-//   },
-//   {
-//     id: '44aa032e-40a2-4958-85e1-bcf8bceab8b6',
-//     category: 'Grocery',
-//     name: 'Premium Shoes',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Shoes',
-//     price: 554.35,
-//   },
-//   {
-//     id: 'd35b0554-f183-4744-8e9d-c846dd4ac207',
-//     category: 'Beauty',
-//     name: 'Advanced Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Speaker',
-//     price: 870.43,
-//   },
-//   {
-//     id: '6be290e4-f3ce-4d33-81b5-1299863f3c51',
-//     category: 'Automotive',
-//     name: 'Advanced Shoes',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Shoes',
-//     price: 830.54,
-//   },
-//   {
-//     id: 'a1009cbb-8b36-49a6-9f98-119e5431ab60',
-//     category: 'Toys',
-//     name: 'Smart Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Mic',
-//     price: 92.37,
-//   },
-//   {
-//     id: 'afebe2d3-11d7-4c85-9fc8-a01fa9bee819',
-//     category: 'Health',
-//     name: 'Advanced Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Pen',
-//     price: 20.63,
-//   },
-//   {
-//     id: 'f614a2e9-62bc-4cb1-98d9-e3865f50d22c',
-//     category: 'Health',
-//     name: 'Compact Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Mug',
-//     price: 299.45,
-//   },
-//   {
-//     id: '2a73cb30-6337-49e7-99b0-7c83baefef54',
-//     category: 'Grocery',
-//     name: 'Durable Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Pen',
-//     price: 250.44,
-//   },
-//   {
-//     id: 'b5c6a7a8-34f8-40cc-a6b7-026a4d740a8c',
-//     category: 'Health',
-//     name: 'Deluxe Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Keyboard',
-//     price: 414.79,
-//   },
-//   {
-//     id: '4218d785-b014-4b1b-b07e-503394bcf121',
-//     category: 'Beauty',
-//     name: 'Smart Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Chair',
-//     price: 501.29,
-//   },
-//   {
-//     id: '4890bb18-cdb2-49bb-bf6b-ae30c96503bf',
-//     category: 'Clothing',
-//     name: 'Portable Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Blender',
-//     price: 635.77,
-//   },
-//   {
-//     id: 'a775c1d9-cc33-4536-b18a-b769b29759a7',
-//     category: 'Toys',
-//     name: 'Eco Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Chair',
-//     price: 516.72,
-//   },
-//   {
-//     id: '3aec3489-4866-4864-8065-f69e8031291b',
-//     category: 'Garden',
-//     name: 'Advanced Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Pen',
-//     price: 414.99,
-//   },
-//   {
-//     id: '11f5cc55-854e-4fc7-bca0-f0a84e4e7dff',
-//     category: 'Garden',
-//     name: 'Eco Shirt',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Shirt',
-//     price: 352.52,
-//   },
-//   {
-//     id: '03d47b53-9da3-48fb-823a-76ceae49dd75',
-//     category: 'Sports',
-//     name: 'Premium Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Mic',
-//     price: 912.24,
-//   },
-//   {
-//     id: 'ebd44b4a-42de-415c-b877-63210acbec9b',
-//     category: 'Automotive',
-//     name: 'Classic Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Mic',
-//     price: 704.09,
-//   },
-//   {
-//     id: 'd638b6ad-2b0e-4902-9fd1-0e4a1f3495c9',
-//     category: 'Grocery',
-//     name: 'Wireless Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Camera',
-//     price: 761.95,
-//   },
-//   {
-//     id: '75372c42-9c09-41f2-9381-496ede810052',
-//     category: 'Grocery',
-//     name: 'Compact Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Blender',
-//     price: 555.31,
-//   },
-//   {
-//     id: 'abebc211-bd96-45c0-a015-acf736c1a72f',
-//     category: 'Automotive',
-//     name: 'Premium Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Speaker',
-//     price: 40.35,
-//   },
-//   {
-//     id: '324fbc51-c527-4f9d-99fc-5ed34cd34ba2',
-//     category: 'Health',
-//     name: 'Durable Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Durable+Speaker',
-//     price: 115.88,
-//   },
-//   {
-//     id: '868f5cee-3b32-4690-b87a-f403f8dfd9ec',
-//     category: 'Sports',
-//     name: 'Compact Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Chair',
-//     price: 942.25,
-//   },
-//   {
-//     id: '6dcd3267-9dae-4c88-9d84-9f1aeda04c6b',
-//     category: 'Books',
-//     name: 'Premium Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Camera',
-//     price: 981.17,
-//   },
-//   {
-//     id: '568b3dfa-2432-4111-8018-7d32562dc227',
-//     category: 'Toys',
-//     name: 'Wireless Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Camera',
-//     price: 612.16,
-//   },
-//   {
-//     id: 'cd4a1098-0764-414b-9ca4-29373e78835a',
-//     category: 'Grocery',
-//     name: 'Deluxe Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Speaker',
-//     price: 92.13,
-//   },
-//   {
-//     id: 'c15696a8-1a59-4fcb-bf1f-8fee6b991e2c',
-//     category: 'Office',
-//     name: 'Compact Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Blender',
-//     price: 288.91,
-//   },
-//   {
-//     id: '46301943-e9ae-4bbe-8d24-4e919d371c1b',
-//     category: 'Garden',
-//     name: 'Smart Mic',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Mic',
-//     price: 942.56,
-//   },
-//   {
-//     id: 'd2ae842e-c9d2-4405-933a-d59f4796d552',
-//     category: 'Garden',
-//     name: 'Eco Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Chair',
-//     price: 904.3,
-//   },
-//   {
-//     id: '9196a941-62d8-44b9-9fd1-25102d83686c',
-//     category: 'Automotive',
-//     name: 'Deluxe Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Pen',
-//     price: 54.58,
-//   },
-//   {
-//     id: '180dfb11-e723-4914-a3e0-30bb9760797d',
-//     category: 'Books',
-//     name: 'Wireless Mug',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Mug',
-//     price: 297.15,
-//   },
-//   {
-//     id: '56c9069e-9484-4e1f-bbf4-861cf4e3e539',
-//     category: 'Sports',
-//     name: 'Compact Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Chair',
-//     price: 242.46,
-//   },
-//   {
-//     id: '40d38992-42c0-4585-8887-eb5515825522',
-//     category: 'Health',
-//     name: 'Compact Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Camera',
-//     price: 244.78,
-//   },
-//   {
-//     id: 'd5351adc-9f4f-4b66-83eb-48a4703a0473',
-//     category: 'Home & Kitchen',
-//     name: 'Wireless Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Keyboard',
-//     price: 765.04,
-//   },
-//   {
-//     id: 'ab60009b-648d-4875-a6d3-01eeac1c6931',
-//     category: 'Office',
-//     name: 'Premium Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Speaker',
-//     price: 997.43,
-//   },
-//   {
-//     id: 'f9d5d780-95a2-4419-be85-50330e78feb2',
-//     category: 'Clothing',
-//     name: 'Portable Blender',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Blender',
-//     price: 718.74,
-//   },
-//   {
-//     id: '939628ac-fcb2-4061-aff1-a060e083508c',
-//     category: 'Music',
-//     name: 'Wireless Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Speaker',
-//     price: 932.72,
-//   },
-//   {
-//     id: '3869f1b5-111c-4367-85a9-19c790756b54',
-//     category: 'Books',
-//     name: 'Advanced Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Advanced+Pen',
-//     price: 334.76,
-//   },
-//   {
-//     id: 'ef8026c7-b49f-4668-9bdc-f1575b7b640b',
-//     category: 'Home & Kitchen',
-//     name: 'Portable Keyboard',
-//     image: 'https://via.placeholder.com/300.png?text=Portable+Keyboard',
-//     price: 356.36,
-//   },
-//   {
-//     id: '4bca7e2b-5022-4b12-a290-2da8e0987d48',
-//     category: 'Sports',
-//     name: 'Smart Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Camera',
-//     price: 861.91,
-//   },
-//   {
-//     id: '4bbff431-9904-4622-82af-b8dc918d1ad1',
-//     category: 'Music',
-//     name: 'Premium Chair',
-//     image: 'https://via.placeholder.com/300.png?text=Premium+Chair',
-//     price: 150.01,
-//   },
-//   {
-//     id: 'b77b032a-7963-4e8a-a148-bcf9e045c7aa',
-//     category: 'Sports',
-//     name: 'Eco Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Eco+Camera',
-//     price: 463.06,
-//   },
-//   {
-//     id: '5c1be3dc-8b7e-47a1-8c16-1665942af4f8',
-//     category: 'Automotive',
-//     name: 'Compact Camera',
-//     image: 'https://via.placeholder.com/300.png?text=Compact+Camera',
-//     price: 387.76,
-//   },
-//   {
-//     id: '5f819779-9cc6-4d10-8a99-e7d73f569119',
-//     category: 'Sports',
-//     name: 'Smart Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Smart+Speaker',
-//     price: 959.51,
-//   },
-//   {
-//     id: '7fb07d2d-adba-4cdd-9449-d490ba6909d8',
-//     category: 'Electronics',
-//     name: 'Classic Speaker',
-//     image: 'https://via.placeholder.com/300.png?text=Classic+Speaker',
-//     price: 969.65,
-//   },
-//   {
-//     id: 'b448f5ee-ff12-486e-be07-4690945c18e2',
-//     category: 'Office',
-//     name: 'Wireless Headphones',
-//     image: 'https://via.placeholder.com/300.png?text=Wireless+Headphones',
-//     price: 721.59,
-//   },
-//   {
-//     id: '083417ba-ce7f-41f6-bf98-bb07c15f3f94',
-//     category: 'Toys',
-//     name: 'Deluxe Pen',
-//     image: 'https://via.placeholder.com/300.png?text=Deluxe+Pen',
-//     price: 80.26,
-//   },
+// const categories = [
+//   'Electronics',
+//   'Home & Kitchen',
+//   'Clothing',
+//   'Books',
+//   'Toys',
+//   'Health',
+//   'Beauty',
+//   'Automotive',
+//   'Office Supplies',
+//   'Sports',
+//   'Garden',
+//   'Pets',
+//   'Grocery',
 // ];
 
-const categories = [
-  'Electronics',
-  'Home & Kitchen',
-  'Clothing',
-  'Books',
-  'Toys',
-  'Health',
-  'Beauty',
-  'Automotive',
-  'Office Supplies',
-  'Sports',
-  'Garden',
-  'Pets',
-  'Grocery',
-];
+// const adjectives = [
+//   'Smart',
+//   'Eco',
+//   'Ultra',
+//   'Modern',
+//   'Classic',
+//   'Premium',
+//   'Deluxe',
+//   'Portable',
+//   'Compact',
+//   'Wireless',
+//   'Elegant',
+//   'Stylish',
+//   'Rugged',
+//   'Advanced',
+//   'Quiet',
+// ];
 
-const adjectives = [
-  'Smart',
-  'Eco',
-  'Ultra',
-  'Modern',
-  'Classic',
-  'Premium',
-  'Deluxe',
-  'Portable',
-  'Compact',
-  'Wireless',
-  'Elegant',
-  'Stylish',
-  'Rugged',
-  'Advanced',
-  'Quiet',
-];
+// const productNouns = [
+//   'Speaker',
+//   'Lamp',
+//   'Chair',
+//   'Watch',
+//   'Pen',
+//   'Keyboard',
+//   'Phone',
+//   'Backpack',
+//   'Blender',
+//   'Mug',
+//   'Monitor',
+//   'Tablet',
+//   'Towel',
+//   'Shoes',
+//   'Mic',
+// ];
 
-const productNouns = [
-  'Speaker',
-  'Lamp',
-  'Chair',
-  'Watch',
-  'Pen',
-  'Keyboard',
-  'Phone',
-  'Backpack',
-  'Blender',
-  'Mug',
-  'Monitor',
-  'Tablet',
-  'Towel',
-  'Shoes',
-  'Mic',
-];
+// const randomName = () => {
+//   const adj = adjectives[Math.floor(Math.random() * adjectives.length)];
+//   const noun = productNouns[Math.floor(Math.random() * productNouns.length)];
+//   return `${adj} ${noun}`;
+// };
 
-const randomName = () => {
-  const adj = adjectives[Math.floor(Math.random() * adjectives.length)];
-  const noun = productNouns[Math.floor(Math.random() * productNouns.length)];
-  return `${adj} ${noun}`;
+// const randomCategory = () =>
+//   categories[Math.floor(Math.random() * categories.length)];
+
+// export const products = Array.from({length: 300}, (_, i) => {
+//   const id = `prod-${i + 1}`;
+//   const category = randomCategory();
+//   const name = randomName();
+//   const price = (Math.random() * 990 + 10).toFixed(2);
+//   const image = `https://picsum.photos/400?random=${Math.random()}`;
+//   // const image = `https://picsum.photos/seed/${id}`;
+//   const description = `
+//     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo necessitatibus aliquam perspiciatis earum eaque harum minima at. Voluptate odio doloremque earum repellat assumenda doloribus, inventore aut accusantium sint nam soluta.
+// Delectus laborum id libero doloremque doloribus explicabo! Reiciendis, vero inventore animi, praesentium omnis architecto officiis at autem explicabo amet magni expedita necessitatibus tempora consequatur cupiditate? A laudantium eius blanditiis eum?
+// Fugit, error recusandae vitae odit esse modi non earum a nulla voluptatum quidem dicta laborum veniam? Totam nobis, ducimus a ratione asperiores similique iusto obcaecati, molestiae accusamus saepe dolorem corrupti.
+// Harum minus exercitationem, soluta ullam, iure corporis non incidunt, dolorum ipsa voluptatum adipisci animi repellendus expedita libero eum. Praesentium at dicta quia fugiat totam, corrupti quos perspiciatis quasi nostrum minima.
+//   `;
+//   return {id, category, name, price, image, description};
+// });
+
+import {type Product} from '../screens/products/types';
+
+export const loadProducts = async (): Promise<Product[]> => {
+  const res = await fetch('https://dummyjson.com/products?limit=300');
+  const {products} = await res.json();
+
+  const transformed = products.map((product: any) => ({
+    id: product.id,
+    name: product.title, // ← map `title` to `name`
+    price: product.price,
+    description: product.description,
+    category: product.category,
+    image: product.thumbnail || product.image || '', // fallback
+  }));
+
+  return transformed;
 };
 
-const randomCategory = () =>
-  categories[Math.floor(Math.random() * categories.length)];
-
-export const products = Array.from({length: 300}, (_, i) => {
-  const id = `prod-${i + 1}`;
-  const category = randomCategory();
-  const name = randomName();
-  const price = (Math.random() * 990 + 10).toFixed(2);
-  const image = `https://picsum.photos/400?random=${Math.random()}`;
-  // const image = `https://picsum.photos/seed/${id}`;
-  const description = `
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo necessitatibus aliquam perspiciatis earum eaque harum minima at. Voluptate odio doloremque earum repellat assumenda doloribus, inventore aut accusantium sint nam soluta.
-Delectus laborum id libero doloremque doloribus explicabo! Reiciendis, vero inventore animi, praesentium omnis architecto officiis at autem explicabo amet magni expedita necessitatibus tempora consequatur cupiditate? A laudantium eius blanditiis eum?
-Fugit, error recusandae vitae odit esse modi non earum a nulla voluptatum quidem dicta laborum veniam? Totam nobis, ducimus a ratione asperiores similique iusto obcaecati, molestiae accusamus saepe dolorem corrupti.
-Harum minus exercitationem, soluta ullam, iure corporis non incidunt, dolorum ipsa voluptatum adipisci animi repellendus expedita libero eum. Praesentium at dicta quia fugiat totam, corrupti quos perspiciatis quasi nostrum minima.
-  `;
-  return {id, category, name, price, image, description};
-});
+export const products = [
+  {
+    id: 1,
+    name: 'Essence Mascara Lash Princess',
+    price: 9.99,
+    description:
+      'The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.',
+    category: 'beauty',
+    image:
+      'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp',
+  },
+  {
+    id: 2,
+    name: 'Eyeshadow Palette with Mirror',
+    price: 19.99,
+    description:
+      "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
+    category: 'beauty',
+    image:
+      'https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp',
+  },
+  {
+    id: 3,
+    name: 'Powder Canister',
+    price: 14.99,
+    description:
+      'The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.',
+    category: 'beauty',
+    image:
+      'https://cdn.dummyjson.com/product-images/beauty/powder-canister/thumbnail.webp',
+  },
+  {
+    id: 4,
+    name: 'Red Lipstick',
+    price: 12.99,
+    description:
+      'The Red Lipstick is a classic and bold choice for adding a pop of color to your lips. With a creamy and pigmented formula, it provides a vibrant and long-lasting finish.',
+    category: 'beauty',
+    image:
+      'https://cdn.dummyjson.com/product-images/beauty/red-lipstick/thumbnail.webp',
+  },
+  {
+    id: 5,
+    name: 'Red Nail Polish',
+    price: 8.99,
+    description:
+      'The Red Nail Polish offers a rich and glossy red hue for vibrant and polished nails. With a quick-drying formula, it provides a salon-quality finish at home.',
+    category: 'beauty',
+    image:
+      'https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/thumbnail.webp',
+  },
+  {
+    id: 6,
+    name: 'Calvin Klein CK One',
+    price: 49.99,
+    description:
+      "CK One by Calvin Klein is a classic unisex fragrance, known for its fresh and clean scent. It's a versatile fragrance suitable for everyday wear.",
+    category: 'fragrances',
+    image:
+      'https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/thumbnail.webp',
+  },
+  {
+    id: 7,
+    name: 'Chanel Coco Noir Eau De',
+    price: 129.99,
+    description:
+      'Coco Noir by Chanel is an elegant and mysterious fragrance, featuring notes of grapefruit, rose, and sandalwood. Perfect for evening occasions.',
+    category: 'fragrances',
+    image:
+      'https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/thumbnail.webp',
+  },
+  {
+    id: 8,
+    name: "Dior J'adore",
+    price: 89.99,
+    description:
+      "J'adore by Dior is a luxurious and floral fragrance, known for its blend of ylang-ylang, rose, and jasmine. It embodies femininity and sophistication.",
+    category: 'fragrances',
+    image:
+      "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp",
+  },
+  {
+    id: 9,
+    name: 'Dolce Shine Eau de',
+    price: 69.99,
+    description:
+      "Dolce Shine by Dolce & Gabbana is a vibrant and fruity fragrance, featuring notes of mango, jasmine, and blonde woods. It's a joyful and youthful scent.",
+    category: 'fragrances',
+    image:
+      'https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/thumbnail.webp',
+  },
+  {
+    id: 10,
+    name: 'Gucci Bloom Eau de',
+    price: 79.99,
+    description:
+      "Gucci Bloom by Gucci is a floral and captivating fragrance, with notes of tuberose, jasmine, and Rangoon creeper. It's a modern and romantic scent.",
+    category: 'fragrances',
+    image:
+      'https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/thumbnail.webp',
+  },
+  {
+    id: 11,
+    name: 'Annibale Colombo Bed',
+    price: 1899.99,
+    description:
+      'The Annibale Colombo Bed is a luxurious and elegant bed frame, crafted with high-quality materials for a comfortable and stylish bedroom.',
+    category: 'furniture',
+    image:
+      'https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/thumbnail.webp',
+  },
+  {
+    id: 12,
+    name: 'Annibale Colombo Sofa',
+    price: 2499.99,
+    description:
+      'The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.',
+    category: 'furniture',
+    image:
+      'https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/thumbnail.webp',
+  },
+  {
+    id: 13,
+    name: 'Bedside Table African Cherry',
+    price: 299.99,
+    description:
+      'The Bedside Table in African Cherry is a stylish and functional addition to your bedroom, providing convenient storage space and a touch of elegance.',
+    category: 'furniture',
+    image:
+      'https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/thumbnail.webp',
+  },
+  {
+    id: 14,
+    name: 'Knoll Saarinen Executive Conference Chair',
+    price: 499.99,
+    description:
+      'The Knoll Saarinen Executive Conference Chair is a modern and ergonomic chair, perfect for your office or conference room with its timeless design.',
+    category: 'furniture',
+    image:
+      'https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/thumbnail.webp',
+  },
+  {
+    id: 15,
+    name: 'Wooden Bathroom Sink With Mirror',
+    price: 799.99,
+    description:
+      'The Wooden Bathroom Sink with Mirror is a unique and stylish addition to your bathroom, featuring a wooden sink countertop and a matching mirror.',
+    category: 'furniture',
+    image:
+      'https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/thumbnail.webp',
+  },
+  {
+    id: 16,
+    name: 'Apple',
+    price: 1.99,
+    description:
+      'Fresh and crisp apples, perfect for snacking or incorporating into various recipes.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/apple/thumbnail.webp',
+  },
+  {
+    id: 17,
+    name: 'Beef Steak',
+    price: 12.99,
+    description:
+      'High-quality beef steak, great for grilling or cooking to your preferred level of doneness.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/beef-steak/thumbnail.webp',
+  },
+  {
+    id: 18,
+    name: 'Cat Food',
+    price: 8.99,
+    description:
+      'Nutritious cat food formulated to meet the dietary needs of your feline friend.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/cat-food/thumbnail.webp',
+  },
+  {
+    id: 19,
+    name: 'Chicken Meat',
+    price: 9.99,
+    description:
+      'Fresh and tender chicken meat, suitable for various culinary preparations.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/chicken-meat/thumbnail.webp',
+  },
+  {
+    id: 20,
+    name: 'Cooking Oil',
+    price: 4.99,
+    description:
+      'Versatile cooking oil suitable for frying, sautéing, and various culinary applications.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/cooking-oil/thumbnail.webp',
+  },
+  {
+    id: 21,
+    name: 'Cucumber',
+    price: 1.49,
+    description:
+      'Crisp and hydrating cucumbers, ideal for salads, snacks, or as a refreshing side.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/cucumber/thumbnail.webp',
+  },
+  {
+    id: 22,
+    name: 'Dog Food',
+    price: 10.99,
+    description:
+      'Specially formulated dog food designed to provide essential nutrients for your canine companion.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/dog-food/thumbnail.webp',
+  },
+  {
+    id: 23,
+    name: 'Eggs',
+    price: 2.99,
+    description:
+      'Fresh eggs, a versatile ingredient for baking, cooking, or breakfast.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/eggs/thumbnail.webp',
+  },
+  {
+    id: 24,
+    name: 'Fish Steak',
+    price: 14.99,
+    description:
+      'Quality fish steak, suitable for grilling, baking, or pan-searing.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/fish-steak/thumbnail.webp',
+  },
+  {
+    id: 25,
+    name: 'Green Bell Pepper',
+    price: 1.29,
+    description:
+      'Fresh and vibrant green bell pepper, perfect for adding color and flavor to your dishes.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/green-bell-pepper/thumbnail.webp',
+  },
+  {
+    id: 26,
+    name: 'Green Chili Pepper',
+    price: 0.99,
+    description:
+      'Spicy green chili pepper, ideal for adding heat to your favorite recipes.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/green-chili-pepper/thumbnail.webp',
+  },
+  {
+    id: 27,
+    name: 'Honey Jar',
+    price: 6.99,
+    description:
+      'Pure and natural honey in a convenient jar, perfect for sweetening beverages or drizzling over food.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/honey-jar/thumbnail.webp',
+  },
+  {
+    id: 28,
+    name: 'Ice Cream',
+    price: 5.49,
+    description:
+      'Creamy and delicious ice cream, available in various flavors for a delightful treat.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/ice-cream/thumbnail.webp',
+  },
+  {
+    id: 29,
+    name: 'Juice',
+    price: 3.99,
+    description:
+      'Refreshing fruit juice, packed with vitamins and great for staying hydrated.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/juice/thumbnail.webp',
+  },
+  {
+    id: 30,
+    name: 'Kiwi',
+    price: 2.49,
+    description:
+      'Nutrient-rich kiwi, perfect for snacking or adding a tropical twist to your dishes.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/kiwi/thumbnail.webp',
+  },
+  {
+    id: 31,
+    name: 'Lemon',
+    price: 0.79,
+    description:
+      'Zesty and tangy lemons, versatile for cooking, baking, or making refreshing beverages.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/lemon/thumbnail.webp',
+  },
+  {
+    id: 32,
+    name: 'Milk',
+    price: 3.49,
+    description:
+      'Fresh and nutritious milk, a staple for various recipes and daily consumption.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/milk/thumbnail.webp',
+  },
+  {
+    id: 33,
+    name: 'Mulberry',
+    price: 4.99,
+    description:
+      'Sweet and juicy mulberries, perfect for snacking or adding to desserts and cereals.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/mulberry/thumbnail.webp',
+  },
+  {
+    id: 34,
+    name: 'Nescafe Coffee',
+    price: 7.99,
+    description:
+      'Quality coffee from Nescafe, available in various blends for a rich and satisfying cup.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/nescafe-coffee/thumbnail.webp',
+  },
+  {
+    id: 35,
+    name: 'Potatoes',
+    price: 2.29,
+    description:
+      'Versatile and starchy potatoes, great for roasting, mashing, or as a side dish.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/potatoes/thumbnail.webp',
+  },
+  {
+    id: 36,
+    name: 'Protein Powder',
+    price: 19.99,
+    description:
+      'Nutrient-packed protein powder, ideal for supplementing your diet with essential proteins.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/protein-powder/thumbnail.webp',
+  },
+  {
+    id: 37,
+    name: 'Red Onions',
+    price: 1.99,
+    description:
+      'Flavorful and aromatic red onions, perfect for adding depth to your savory dishes.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/red-onions/thumbnail.webp',
+  },
+  {
+    id: 38,
+    name: 'Rice',
+    price: 5.99,
+    description:
+      'High-quality rice, a staple for various cuisines and a versatile base for many dishes.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/rice/thumbnail.webp',
+  },
+  {
+    id: 39,
+    name: 'Soft Drinks',
+    price: 1.99,
+    description:
+      'Assorted soft drinks in various flavors, perfect for refreshing beverages.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/soft-drinks/thumbnail.webp',
+  },
+  {
+    id: 40,
+    name: 'Strawberry',
+    price: 3.99,
+    description:
+      'Sweet and succulent strawberries, great for snacking, desserts, or blending into smoothies.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/strawberry/thumbnail.webp',
+  },
+  {
+    id: 41,
+    name: 'Tissue Paper Box',
+    price: 2.49,
+    description:
+      'Convenient tissue paper box for everyday use, providing soft and absorbent tissues.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/tissue-paper-box/thumbnail.webp',
+  },
+  {
+    id: 42,
+    name: 'Water',
+    price: 0.99,
+    description:
+      'Pure and refreshing bottled water, essential for staying hydrated throughout the day.',
+    category: 'groceries',
+    image:
+      'https://cdn.dummyjson.com/product-images/groceries/water/thumbnail.webp',
+  },
+  {
+    id: 43,
+    name: 'Decoration Swing',
+    price: 59.99,
+    description:
+      'The Decoration Swing is a charming addition to your home decor. Crafted with intricate details, it adds a touch of elegance and whimsy to any room.',
+    category: 'home-decoration',
+    image:
+      'https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/thumbnail.webp',
+  },
+  {
+    id: 44,
+    name: 'Family Tree Photo Frame',
+    price: 29.99,
+    description:
+      'The Family Tree Photo Frame is a sentimental and stylish way to display your cherished family memories. With multiple photo slots, it tells the story of your loved ones.',
+    category: 'home-decoration',
+    image:
+      'https://cdn.dummyjson.com/product-images/home-decoration/family-tree-photo-frame/thumbnail.webp',
+  },
+  {
+    id: 45,
+    name: 'House Showpiece Plant',
+    price: 39.99,
+    description:
+      'The House Showpiece Plant is an artificial plant that brings a touch of nature to your home without the need for maintenance. It adds greenery and style to any space.',
+    category: 'home-decoration',
+    image:
+      'https://cdn.dummyjson.com/product-images/home-decoration/house-showpiece-plant/thumbnail.webp',
+  },
+  {
+    id: 46,
+    name: 'Plant Pot',
+    price: 14.99,
+    description:
+      'The Plant Pot is a stylish container for your favorite plants. With a sleek design, it complements your indoor or outdoor garden, adding a modern touch to your plant display.',
+    category: 'home-decoration',
+    image:
+      'https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/thumbnail.webp',
+  },
+  {
+    id: 47,
+    name: 'Table Lamp',
+    price: 49.99,
+    description:
+      'The Table Lamp is a functional and decorative lighting solution for your living space. With a modern design, it provides both ambient and task lighting, enhancing the atmosphere.',
+    category: 'home-decoration',
+    image:
+      'https://cdn.dummyjson.com/product-images/home-decoration/table-lamp/thumbnail.webp',
+  },
+  {
+    id: 48,
+    name: 'Bamboo Spatula',
+    price: 7.99,
+    description:
+      'The Bamboo Spatula is a versatile kitchen tool made from eco-friendly bamboo. Ideal for flipping, stirring, and serving various dishes.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/bamboo-spatula/thumbnail.webp',
+  },
+  {
+    id: 49,
+    name: 'Black Aluminium Cup',
+    price: 5.99,
+    description:
+      'The Black Aluminium Cup is a stylish and durable cup suitable for both hot and cold beverages. Its sleek black design adds a modern touch to your drinkware collection.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/black-aluminium-cup/thumbnail.webp',
+  },
+  {
+    id: 50,
+    name: 'Black Whisk',
+    price: 9.99,
+    description:
+      'The Black Whisk is a kitchen essential for whisking and beating ingredients. Its ergonomic handle and sleek design make it a practical and stylish tool.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/black-whisk/thumbnail.webp',
+  },
+  {
+    id: 51,
+    name: 'Boxed Blender',
+    price: 39.99,
+    description:
+      'The Boxed Blender is a powerful and compact blender perfect for smoothies, shakes, and more. Its convenient design and multiple functions make it a versatile kitchen appliance.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/thumbnail.webp',
+  },
+  {
+    id: 52,
+    name: 'Carbon Steel Wok',
+    price: 29.99,
+    description:
+      'The Carbon Steel Wok is a versatile cooking pan suitable for stir-frying, sautéing, and deep frying. Its sturdy construction ensures even heat distribution for delicious meals.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/carbon-steel-wok/thumbnail.webp',
+  },
+  {
+    id: 53,
+    name: 'Chopping Board',
+    price: 12.99,
+    description:
+      'The Chopping Board is an essential kitchen accessory for food preparation. Made from durable material, it provides a safe and hygienic surface for cutting and chopping.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/chopping-board/thumbnail.webp',
+  },
+  {
+    id: 54,
+    name: 'Citrus Squeezer Yellow',
+    price: 8.99,
+    description:
+      'The Citrus Squeezer in Yellow is a handy tool for extracting juice from citrus fruits. Its vibrant color adds a cheerful touch to your kitchen gadgets.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/citrus-squeezer-yellow/thumbnail.webp',
+  },
+  {
+    id: 55,
+    name: 'Egg Slicer',
+    price: 6.99,
+    description:
+      "The Egg Slicer is a convenient tool for slicing boiled eggs evenly. It's perfect for salads, sandwiches, and other dishes where sliced eggs are desired.",
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/egg-slicer/thumbnail.webp',
+  },
+  {
+    id: 56,
+    name: 'Electric Stove',
+    price: 49.99,
+    description:
+      'The Electric Stove provides a portable and efficient cooking solution. Ideal for small kitchens or as an additional cooking surface for various culinary needs.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/thumbnail.webp',
+  },
+  {
+    id: 57,
+    name: 'Fine Mesh Strainer',
+    price: 9.99,
+    description:
+      'The Fine Mesh Strainer is a versatile tool for straining liquids and sifting dry ingredients. Its fine mesh ensures efficient filtering for smooth cooking and baking.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/fine-mesh-strainer/thumbnail.webp',
+  },
+  {
+    id: 58,
+    name: 'Fork',
+    price: 3.99,
+    description:
+      'The Fork is a classic utensil for various dining and serving purposes. Its durable and ergonomic design makes it a reliable choice for everyday use.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/fork/thumbnail.webp',
+  },
+  {
+    id: 59,
+    name: 'Glass',
+    price: 4.99,
+    description:
+      'The Glass is a versatile and elegant drinking vessel suitable for a variety of beverages. Its clear design allows you to enjoy the colors and textures of your drinks.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/glass/thumbnail.webp',
+  },
+  {
+    id: 60,
+    name: 'Grater Black',
+    price: 10.99,
+    description:
+      'The Grater in Black is a handy kitchen tool for grating cheese, vegetables, and more. Its sleek design and sharp blades make food preparation efficient and easy.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/grater-black/thumbnail.webp',
+  },
+  {
+    id: 61,
+    name: 'Hand Blender',
+    price: 34.99,
+    description:
+      'The Hand Blender is a versatile kitchen appliance for blending, pureeing, and mixing. Its compact design and powerful motor make it a convenient tool for various recipes.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/hand-blender/thumbnail.webp',
+  },
+  {
+    id: 62,
+    name: 'Ice Cube Tray',
+    price: 5.99,
+    description:
+      'The Ice Cube Tray is a practical accessory for making ice cubes in various shapes. Perfect for keeping your drinks cool and adding a fun element to your beverages.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/ice-cube-tray/thumbnail.webp',
+  },
+  {
+    id: 63,
+    name: 'Kitchen Sieve',
+    price: 7.99,
+    description:
+      'The Kitchen Sieve is a versatile tool for sifting and straining dry and wet ingredients. Its fine mesh design ensures smooth results in your cooking and baking.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/kitchen-sieve/thumbnail.webp',
+  },
+  {
+    id: 64,
+    name: 'Knife',
+    price: 14.99,
+    description:
+      'The Knife is an essential kitchen tool for chopping, slicing, and dicing. Its sharp blade and ergonomic handle make it a reliable choice for food preparation.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/knife/thumbnail.webp',
+  },
+  {
+    id: 65,
+    name: 'Lunch Box',
+    price: 12.99,
+    description:
+      "The Lunch Box is a convenient and portable container for packing and carrying your meals. With compartments for different foods, it's perfect for on-the-go dining.",
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/lunch-box/thumbnail.webp',
+  },
+  {
+    id: 66,
+    name: 'Microwave Oven',
+    price: 89.99,
+    description:
+      'The Microwave Oven is a versatile kitchen appliance for quick and efficient cooking, reheating, and defrosting. Its compact size makes it suitable for various kitchen setups.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/microwave-oven/thumbnail.webp',
+  },
+  {
+    id: 67,
+    name: 'Mug Tree Stand',
+    price: 15.99,
+    description:
+      'The Mug Tree Stand is a stylish and space-saving solution for organizing your mugs. Keep your favorite mugs easily accessible and neatly displayed in your kitchen.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/mug-tree-stand/thumbnail.webp',
+  },
+  {
+    id: 68,
+    name: 'Pan',
+    price: 24.99,
+    description:
+      'The Pan is a versatile and essential cookware item for frying, sautéing, and cooking various dishes. Its non-stick coating ensures easy food release and cleanup.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/pan/thumbnail.webp',
+  },
+  {
+    id: 69,
+    name: 'Plate',
+    price: 3.99,
+    description:
+      'The Plate is a classic and essential dishware item for serving meals. Its durable and stylish design makes it suitable for everyday use or special occasions.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/plate/thumbnail.webp',
+  },
+  {
+    id: 70,
+    name: 'Red Tongs',
+    price: 6.99,
+    description:
+      'The Red Tongs are versatile kitchen tongs suitable for various cooking and serving tasks. Their vibrant color adds a pop of excitement to your kitchen utensils.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/red-tongs/thumbnail.webp',
+  },
+  {
+    id: 71,
+    name: 'Silver Pot With Glass Cap',
+    price: 39.99,
+    description:
+      'The Silver Pot with Glass Cap is a stylish and functional cookware item for boiling, simmering, and preparing delicious meals. Its glass cap allows you to monitor cooking progress.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/silver-pot-with-glass-cap/thumbnail.webp',
+  },
+  {
+    id: 72,
+    name: 'Slotted Turner',
+    price: 8.99,
+    description:
+      'The Slotted Turner is a kitchen utensil designed for flipping and turning food items. Its slotted design allows excess liquid to drain, making it ideal for frying and sautéing.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/slotted-turner/thumbnail.webp',
+  },
+  {
+    id: 73,
+    name: 'Spice Rack',
+    price: 19.99,
+    description:
+      'The Spice Rack is a convenient organizer for your spices and seasonings. Keep your kitchen essentials within reach and neatly arranged with this stylish spice rack.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/spice-rack/thumbnail.webp',
+  },
+  {
+    id: 74,
+    name: 'Spoon',
+    price: 4.99,
+    description:
+      'The Spoon is a versatile kitchen utensil for stirring, serving, and tasting. Its ergonomic design and durable construction make it an essential tool for every kitchen.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/spoon/thumbnail.webp',
+  },
+  {
+    id: 75,
+    name: 'Tray',
+    price: 16.99,
+    description:
+      'The Tray is a functional and decorative item for serving snacks, appetizers, or drinks. Its stylish design makes it a versatile accessory for entertaining guests.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/tray/thumbnail.webp',
+  },
+  {
+    id: 76,
+    name: 'Wooden Rolling Pin',
+    price: 11.99,
+    description:
+      'The Wooden Rolling Pin is a classic kitchen tool for rolling out dough for baking. Its smooth surface and sturdy handles make it easy to achieve uniform thickness.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/wooden-rolling-pin/thumbnail.webp',
+  },
+  {
+    id: 77,
+    name: 'Yellow Peeler',
+    price: 5.99,
+    description:
+      'The Yellow Peeler is a handy tool for peeling fruits and vegetables with ease. Its bright yellow color adds a cheerful touch to your kitchen gadgets.',
+    category: 'kitchen-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/kitchen-accessories/yellow-peeler/thumbnail.webp',
+  },
+  {
+    id: 78,
+    name: 'Apple MacBook Pro 14 Inch Space Grey',
+    price: 1999.99,
+    description:
+      "The MacBook Pro 14 Inch in Space Grey is a powerful and sleek laptop, featuring Apple's M1 Pro chip for exceptional performance and a stunning Retina display.",
+    category: 'laptops',
+    image:
+      'https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/thumbnail.webp',
+  },
+  {
+    id: 79,
+    name: 'Asus Zenbook Pro Dual Screen Laptop',
+    price: 1799.99,
+    description:
+      'The Asus Zenbook Pro Dual Screen Laptop is a high-performance device with dual screens, providing productivity and versatility for creative professionals.',
+    category: 'laptops',
+    image:
+      'https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/thumbnail.webp',
+  },
+  {
+    id: 80,
+    name: 'Huawei Matebook X Pro',
+    price: 1399.99,
+    description:
+      'The Huawei Matebook X Pro is a slim and stylish laptop with a high-resolution touchscreen display, offering a premium experience for users on the go.',
+    category: 'laptops',
+    image:
+      'https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/thumbnail.webp',
+  },
+  {
+    id: 81,
+    name: 'Lenovo Yoga 920',
+    price: 1099.99,
+    description:
+      'The Lenovo Yoga 920 is a 2-in-1 convertible laptop with a flexible hinge, allowing you to use it as a laptop or tablet, offering versatility and portability.',
+    category: 'laptops',
+    image:
+      'https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/thumbnail.webp',
+  },
+  {
+    id: 82,
+    name: 'New DELL XPS 13 9300 Laptop',
+    price: 1499.99,
+    description:
+      'The New DELL XPS 13 9300 Laptop is a compact and powerful device, featuring a virtually borderless InfinityEdge display and high-end performance for various tasks.',
+    category: 'laptops',
+    image:
+      'https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/thumbnail.webp',
+  },
+  {
+    id: 83,
+    name: 'Blue & Black Check Shirt',
+    price: 29.99,
+    description:
+      "The Blue & Black Check Shirt is a stylish and comfortable men's shirt featuring a classic check pattern. Made from high-quality fabric, it's suitable for both casual and semi-formal occasions.",
+    category: 'mens-shirts',
+    image:
+      'https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/thumbnail.webp',
+  },
+  {
+    id: 84,
+    name: 'Gigabyte Aorus Men Tshirt',
+    price: 24.99,
+    description:
+      "The Gigabyte Aorus Men Tshirt is a cool and casual shirt for gaming enthusiasts. With the Aorus logo and sleek design, it's perfect for expressing your gaming style.",
+    category: 'mens-shirts',
+    image:
+      'https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/thumbnail.webp',
+  },
+  {
+    id: 85,
+    name: 'Man Plaid Shirt',
+    price: 34.99,
+    description:
+      "The Man Plaid Shirt is a timeless and versatile men's shirt with a classic plaid pattern. Its comfortable fit and casual style make it a wardrobe essential for various occasions.",
+    category: 'mens-shirts',
+    image:
+      'https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/thumbnail.webp',
+  },
+  {
+    id: 86,
+    name: 'Man Short Sleeve Shirt',
+    price: 19.99,
+    description:
+      "The Man Short Sleeve Shirt is a breezy and stylish option for warm days. With a comfortable fit and short sleeves, it's perfect for a laid-back yet polished look.",
+    category: 'mens-shirts',
+    image:
+      'https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/thumbnail.webp',
+  },
+  {
+    id: 87,
+    name: 'Men Check Shirt',
+    price: 27.99,
+    description:
+      'The Men Check Shirt is a classic and versatile shirt featuring a stylish check pattern. Suitable for various occasions, it adds a smart and polished touch to your wardrobe.',
+    category: 'mens-shirts',
+    image:
+      'https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/thumbnail.webp',
+  },
+  {
+    id: 88,
+    name: 'Nike Air Jordan 1 Red And Black',
+    price: 149.99,
+    description:
+      'The Nike Air Jordan 1 in Red and Black is an iconic basketball sneaker known for its stylish design and high-performance features, making it a favorite among sneaker enthusiasts and athletes.',
+    category: 'mens-shoes',
+    image:
+      'https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/thumbnail.webp',
+  },
+  {
+    id: 89,
+    name: 'Nike Baseball Cleats',
+    price: 79.99,
+    description:
+      'Nike Baseball Cleats are designed for maximum traction and performance on the baseball field. They provide stability and support for players during games and practices.',
+    category: 'mens-shoes',
+    image:
+      'https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/thumbnail.webp',
+  },
+  {
+    id: 90,
+    name: 'Puma Future Rider Trainers',
+    price: 89.99,
+    description:
+      'The Puma Future Rider Trainers offer a blend of retro style and modern comfort. Perfect for casual wear, these trainers provide a fashionable and comfortable option for everyday use.',
+    category: 'mens-shoes',
+    image:
+      'https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/thumbnail.webp',
+  },
+  {
+    id: 91,
+    name: 'Sports Sneakers Off White & Red',
+    price: 119.99,
+    description:
+      'The Sports Sneakers in Off White and Red combine style and functionality, making them a fashionable choice for sports enthusiasts. The red and off-white color combination adds a bold and energetic touch.',
+    category: 'mens-shoes',
+    image:
+      'https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/thumbnail.webp',
+  },
+  {
+    id: 92,
+    name: 'Sports Sneakers Off White Red',
+    price: 109.99,
+    description:
+      'Another variant of the Sports Sneakers in Off White Red, featuring a unique design. These sneakers offer style and comfort for casual occasions.',
+    category: 'mens-shoes',
+    image:
+      'https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/thumbnail.webp',
+  },
+  {
+    id: 93,
+    name: 'Brown Leather Belt Watch',
+    price: 89.99,
+    description:
+      'The Brown Leather Belt Watch is a stylish timepiece with a classic design. Featuring a genuine leather strap and a sleek dial, it adds a touch of sophistication to your look.',
+    category: 'mens-watches',
+    image:
+      'https://cdn.dummyjson.com/product-images/mens-watches/brown-leather-belt-watch/thumbnail.webp',
+  },
+  {
+    id: 94,
+    name: 'Longines Master Collection',
+    price: 1499.99,
+    description:
+      "The Longines Master Collection is an elegant and refined watch known for its precision and craftsmanship. With a timeless design, it's a symbol of luxury and sophistication.",
+    category: 'mens-watches',
+    image:
+      'https://cdn.dummyjson.com/product-images/mens-watches/longines-master-collection/thumbnail.webp',
+  },
+  {
+    id: 95,
+    name: 'Rolex Cellini Date Black Dial',
+    price: 8999.99,
+    description:
+      "The Rolex Cellini Date with Black Dial is a classic and prestigious watch. With a black dial and date complication, it exudes sophistication and is a symbol of Rolex's heritage.",
+    category: 'mens-watches',
+    image:
+      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-date-black-dial/thumbnail.webp',
+  },
+  {
+    id: 96,
+    name: 'Rolex Cellini Moonphase',
+    price: 12999.99,
+    description:
+      "The Rolex Cellini Moonphase is a masterpiece of horology, featuring a moon phase complication and exquisite design. It reflects Rolex's commitment to precision and elegance.",
+    category: 'mens-watches',
+    image:
+      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-moonphase/thumbnail.webp',
+  },
+  {
+    id: 97,
+    name: 'Rolex Datejust',
+    price: 10999.99,
+    description:
+      "The Rolex Datejust is an iconic and versatile timepiece with a date window. Known for its timeless design and reliability, it's a symbol of Rolex's watchmaking excellence.",
+    category: 'mens-watches',
+    image:
+      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-datejust/thumbnail.webp',
+  },
+  {
+    id: 98,
+    name: 'Rolex Submariner Watch',
+    price: 13999.99,
+    description:
+      "The Rolex Submariner is a legendary dive watch with a rich history. Known for its durability and water resistance, it's a symbol of adventure and exploration.",
+    category: 'mens-watches',
+    image:
+      'https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/thumbnail.webp',
+  },
+  {
+    id: 99,
+    name: 'Amazon Echo Plus',
+    price: 99.99,
+    description:
+      'The Amazon Echo Plus is a smart speaker with built-in Alexa voice control. It features premium sound quality and serves as a hub for controlling smart home devices.',
+    category: 'mobile-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/thumbnail.webp',
+  },
+  {
+    id: 100,
+    name: 'Apple Airpods',
+    price: 129.99,
+    description:
+      'The Apple Airpods offer a seamless wireless audio experience. With easy pairing, high-quality sound, and Siri integration, they are perfect for on-the-go listening.',
+    category: 'mobile-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/thumbnail.webp',
+  },
+  {
+    id: 101,
+    name: 'Apple AirPods Max Silver',
+    price: 549.99,
+    description:
+      'The Apple AirPods Max in Silver are premium over-ear headphones with high-fidelity audio, adaptive EQ, and active noise cancellation. Experience immersive sound in style.',
+    category: 'mobile-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods-max-silver/thumbnail.webp',
+  },
+  {
+    id: 102,
+    name: 'Apple Airpower Wireless Charger',
+    price: 79.99,
+    description:
+      'The Apple AirPower Wireless Charger provides a convenient way to charge your compatible Apple devices wirelessly. Simply place your devices on the charging mat for effortless charging.',
+    category: 'mobile-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpower-wireless-charger/thumbnail.webp',
+  },
+  {
+    id: 103,
+    name: 'Apple HomePod Mini Cosmic Grey',
+    price: 99.99,
+    description:
+      'The Apple HomePod Mini in Cosmic Grey is a compact smart speaker that delivers impressive audio and integrates seamlessly with the Apple ecosystem for a smart home experience.',
+    category: 'mobile-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-homepod-mini-cosmic-grey/thumbnail.webp',
+  },
+  {
+    id: 104,
+    name: 'Apple iPhone Charger',
+    price: 19.99,
+    description:
+      'The Apple iPhone Charger is a high-quality charger designed for fast and efficient charging of your iPhone. Ensure your device stays powered up and ready to go.',
+    category: 'mobile-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-iphone-charger/thumbnail.webp',
+  },
+  {
+    id: 105,
+    name: 'Apple MagSafe Battery Pack',
+    price: 99.99,
+    description:
+      'The Apple MagSafe Battery Pack is a portable and convenient way to add extra battery life to your MagSafe-compatible iPhone. Attach it magnetically for a secure connection.',
+    category: 'mobile-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-magsafe-battery-pack/thumbnail.webp',
+  },
+  {
+    id: 106,
+    name: 'Apple Watch Series 4 Gold',
+    price: 349.99,
+    description:
+      'The Apple Watch Series 4 in Gold is a stylish and advanced smartwatch with features like heart rate monitoring, fitness tracking, and a beautiful Retina display.',
+    category: 'mobile-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/thumbnail.webp',
+  },
+  {
+    id: 107,
+    name: 'Beats Flex Wireless Earphones',
+    price: 49.99,
+    description:
+      'The Beats Flex Wireless Earphones offer a comfortable and versatile audio experience. With magnetic earbuds and up to 12 hours of battery life, they are ideal for everyday use.',
+    category: 'mobile-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/mobile-accessories/beats-flex-wireless-earphones/thumbnail.webp',
+  },
+  {
+    id: 108,
+    name: 'iPhone 12 Silicone Case with MagSafe Plum',
+    price: 29.99,
+    description:
+      'The iPhone 12 Silicone Case with MagSafe in Plum is a stylish and protective case designed for the iPhone 12. It features MagSafe technology for easy attachment of accessories.',
+    category: 'mobile-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/thumbnail.webp',
+  },
+  {
+    id: 109,
+    name: 'Monopod',
+    price: 19.99,
+    description:
+      'The Monopod is a versatile camera accessory for stable and adjustable shooting. Perfect for capturing selfies, group photos, and videos with ease.',
+    category: 'mobile-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/mobile-accessories/monopod/thumbnail.webp',
+  },
+  {
+    id: 110,
+    name: 'Selfie Lamp with iPhone',
+    price: 14.99,
+    description:
+      'The Selfie Lamp with iPhone is a portable and adjustable LED light designed to enhance your selfies and video calls. Attach it to your iPhone for well-lit photos.',
+    category: 'mobile-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-lamp-with-iphone/thumbnail.webp',
+  },
+  {
+    id: 111,
+    name: 'Selfie Stick Monopod',
+    price: 12.99,
+    description:
+      'The Selfie Stick Monopod is a extendable and foldable device for capturing the perfect selfie or group photo. Compatible with smartphones and cameras.',
+    category: 'mobile-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-stick-monopod/thumbnail.webp',
+  },
+  {
+    id: 112,
+    name: 'TV Studio Camera Pedestal',
+    price: 499.99,
+    description:
+      'The TV Studio Camera Pedestal is a professional-grade camera support system for smooth and precise camera movements in a studio setting. Ideal for broadcast and production.',
+    category: 'mobile-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/mobile-accessories/tv-studio-camera-pedestal/thumbnail.webp',
+  },
+  {
+    id: 113,
+    name: 'Generic Motorcycle',
+    price: 3999.99,
+    description:
+      'The Generic Motorcycle is a versatile and reliable bike suitable for various riding preferences. With a balanced design, it provides a comfortable and efficient riding experience.',
+    category: 'motorcycle',
+    image:
+      'https://cdn.dummyjson.com/product-images/motorcycle/generic-motorcycle/thumbnail.webp',
+  },
+  {
+    id: 114,
+    name: 'Kawasaki Z800',
+    price: 8999.99,
+    description:
+      "The Kawasaki Z800 is a powerful and agile sportbike known for its striking design and performance. It's equipped with advanced features, making it a favorite among motorcycle enthusiasts.",
+    category: 'motorcycle',
+    image:
+      'https://cdn.dummyjson.com/product-images/motorcycle/kawasaki-z800/thumbnail.webp',
+  },
+  {
+    id: 115,
+    name: 'MotoGP CI.H1',
+    price: 14999.99,
+    description:
+      'The MotoGP CI.H1 is a high-performance motorcycle inspired by MotoGP racing technology. It offers cutting-edge features and precision engineering for an exhilarating riding experience.',
+    category: 'motorcycle',
+    image:
+      'https://cdn.dummyjson.com/product-images/motorcycle/motogp-ci.h1/thumbnail.webp',
+  },
+  {
+    id: 116,
+    name: 'Scooter Motorcycle',
+    price: 2999.99,
+    description:
+      'The Scooter Motorcycle is a practical and fuel-efficient bike ideal for urban commuting. It features a step-through design and user-friendly controls for easy maneuverability.',
+    category: 'motorcycle',
+    image:
+      'https://cdn.dummyjson.com/product-images/motorcycle/scooter-motorcycle/thumbnail.webp',
+  },
+  {
+    id: 117,
+    name: 'Sportbike Motorcycle',
+    price: 7499.99,
+    description:
+      "The Sportbike Motorcycle is designed for speed and agility, with a sleek and aerodynamic profile. It's suitable for riders looking for a dynamic and thrilling riding experience.",
+    category: 'motorcycle',
+    image:
+      'https://cdn.dummyjson.com/product-images/motorcycle/sportbike-motorcycle/thumbnail.webp',
+  },
+  {
+    id: 118,
+    name: 'Attitude Super Leaves Hand Soap',
+    price: 8.99,
+    description:
+      'Attitude Super Leaves Hand Soap is a natural and nourishing hand soap enriched with the goodness of super leaves. It cleanses and moisturizes your hands, leaving them feeling fresh and soft.',
+    category: 'skin-care',
+    image:
+      'https://cdn.dummyjson.com/product-images/skin-care/attitude-super-leaves-hand-soap/thumbnail.webp',
+  },
+  {
+    id: 119,
+    name: 'Olay Ultra Moisture Shea Butter Body Wash',
+    price: 12.99,
+    description:
+      'Olay Ultra Moisture Shea Butter Body Wash is a luxurious body wash that hydrates and nourishes your skin with the moisturizing power of shea butter. Enjoy a rich lather and silky-smooth skin.',
+    category: 'skin-care',
+    image:
+      'https://cdn.dummyjson.com/product-images/skin-care/olay-ultra-moisture-shea-butter-body-wash/thumbnail.webp',
+  },
+  {
+    id: 120,
+    name: 'Vaseline Men Body and Face Lotion',
+    price: 9.99,
+    description:
+      "Vaseline Men Body and Face Lotion is a specially formulated lotion designed to provide long-lasting moisture to men's skin. It absorbs quickly and helps keep the skin hydrated and healthy.",
+    category: 'skin-care',
+    image:
+      'https://cdn.dummyjson.com/product-images/skin-care/vaseline-men-body-and-face-lotion/thumbnail.webp',
+  },
+  {
+    id: 121,
+    name: 'iPhone 5s',
+    price: 199.99,
+    description:
+      "The iPhone 5s is a classic smartphone known for its compact design and advanced features during its release. While it's an older model, it still provides a reliable user experience.",
+    category: 'smartphones',
+    image:
+      'https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp',
+  },
+  {
+    id: 122,
+    name: 'iPhone 6',
+    price: 299.99,
+    description:
+      'The iPhone 6 is a stylish and capable smartphone with a larger display and improved performance. It introduced new features and design elements, making it a popular choice in its time.',
+    category: 'smartphones',
+    image:
+      'https://cdn.dummyjson.com/product-images/smartphones/iphone-6/thumbnail.webp',
+  },
+  {
+    id: 123,
+    name: 'iPhone 13 Pro',
+    price: 1099.99,
+    description:
+      'The iPhone 13 Pro is a cutting-edge smartphone with a powerful camera system, high-performance chip, and stunning display. It offers advanced features for users who demand top-notch technology.',
+    category: 'smartphones',
+    image:
+      'https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/thumbnail.webp',
+  },
+  {
+    id: 124,
+    name: 'iPhone X',
+    price: 899.99,
+    description:
+      'The iPhone X is a flagship smartphone featuring a bezel-less OLED display, facial recognition technology (Face ID), and impressive performance. It represents a milestone in iPhone design and innovation.',
+    category: 'smartphones',
+    image:
+      'https://cdn.dummyjson.com/product-images/smartphones/iphone-x/thumbnail.webp',
+  },
+  {
+    id: 125,
+    name: 'Oppo A57',
+    price: 249.99,
+    description:
+      'The Oppo A57 is a mid-range smartphone known for its sleek design and capable features. It offers a balance of performance and affordability, making it a popular choice.',
+    category: 'smartphones',
+    image:
+      'https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/thumbnail.webp',
+  },
+  {
+    id: 126,
+    name: 'Oppo F19 Pro Plus',
+    price: 399.99,
+    description:
+      'The Oppo F19 Pro Plus is a feature-rich smartphone with a focus on camera capabilities. It boasts advanced photography features and a powerful performance for a premium user experience.',
+    category: 'smartphones',
+    image:
+      'https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/thumbnail.webp',
+  },
+  {
+    id: 127,
+    name: 'Oppo K1',
+    price: 299.99,
+    description:
+      'The Oppo K1 series offers a range of smartphones with various features and specifications. Known for their stylish design and reliable performance, the Oppo K1 series caters to diverse user preferences.',
+    category: 'smartphones',
+    image:
+      'https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/thumbnail.webp',
+  },
+  {
+    id: 128,
+    name: 'Realme C35',
+    price: 149.99,
+    description:
+      'The Realme C35 is a budget-friendly smartphone with a focus on providing essential features for everyday use. It offers a reliable performance and user-friendly experience.',
+    category: 'smartphones',
+    image:
+      'https://cdn.dummyjson.com/product-images/smartphones/realme-c35/thumbnail.webp',
+  },
+  {
+    id: 129,
+    name: 'Realme X',
+    price: 299.99,
+    description:
+      'The Realme X is a mid-range smartphone known for its sleek design and impressive display. It offers a good balance of performance and camera capabilities for users seeking a quality device.',
+    category: 'smartphones',
+    image:
+      'https://cdn.dummyjson.com/product-images/smartphones/realme-x/thumbnail.webp',
+  },
+  {
+    id: 130,
+    name: 'Realme XT',
+    price: 349.99,
+    description:
+      'The Realme XT is a feature-rich smartphone with a focus on camera technology. It comes equipped with advanced camera sensors, delivering high-quality photos and videos for photography enthusiasts.',
+    category: 'smartphones',
+    image:
+      'https://cdn.dummyjson.com/product-images/smartphones/realme-xt/thumbnail.webp',
+  },
+  {
+    id: 131,
+    name: 'Samsung Galaxy S7',
+    price: 299.99,
+    description:
+      'The Samsung Galaxy S7 is a flagship smartphone known for its sleek design and advanced features. It features a high-resolution display, powerful camera, and robust performance.',
+    category: 'smartphones',
+    image:
+      'https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/thumbnail.webp',
+  },
+  {
+    id: 132,
+    name: 'Samsung Galaxy S8',
+    price: 499.99,
+    description:
+      'The Samsung Galaxy S8 is a premium smartphone with an Infinity Display, offering a stunning visual experience. It boasts advanced camera capabilities and cutting-edge technology.',
+    category: 'smartphones',
+    image:
+      'https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/thumbnail.webp',
+  },
+  {
+    id: 133,
+    name: 'Samsung Galaxy S10',
+    price: 699.99,
+    description:
+      'The Samsung Galaxy S10 is a flagship device featuring a dynamic AMOLED display, versatile camera system, and powerful performance. It represents innovation and excellence in smartphone technology.',
+    category: 'smartphones',
+    image:
+      'https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/thumbnail.webp',
+  },
+  {
+    id: 134,
+    name: 'Vivo S1',
+    price: 249.99,
+    description:
+      'The Vivo S1 is a stylish and mid-range smartphone offering a blend of design and performance. It features a vibrant display, capable camera system, and reliable functionality.',
+    category: 'smartphones',
+    image:
+      'https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/thumbnail.webp',
+  },
+  {
+    id: 135,
+    name: 'Vivo V9',
+    price: 299.99,
+    description:
+      'The Vivo V9 is a smartphone known for its sleek design and emphasis on capturing high-quality selfies. It features a notch display, dual-camera setup, and a modern design.',
+    category: 'smartphones',
+    image:
+      'https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/thumbnail.webp',
+  },
+  {
+    id: 136,
+    name: 'Vivo X21',
+    price: 499.99,
+    description:
+      'The Vivo X21 is a premium smartphone with a focus on cutting-edge technology. It features an in-display fingerprint sensor, a high-resolution display, and advanced camera capabilities.',
+    category: 'smartphones',
+    image:
+      'https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/thumbnail.webp',
+  },
+  {
+    id: 137,
+    name: 'American Football',
+    price: 19.99,
+    description:
+      'The American Football is a classic ball used in American football games. It is designed for throwing and catching, making it an essential piece of equipment for the sport.',
+    category: 'sports-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/sports-accessories/american-football/thumbnail.webp',
+  },
+  {
+    id: 138,
+    name: 'Baseball Ball',
+    price: 8.99,
+    description:
+      'The Baseball Ball is a standard baseball used in baseball games. It features a durable leather cover and is designed for pitching, hitting, and fielding in the game of baseball.',
+    category: 'sports-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/sports-accessories/baseball-ball/thumbnail.webp',
+  },
+  {
+    id: 139,
+    name: 'Baseball Glove',
+    price: 24.99,
+    description:
+      'The Baseball Glove is a protective glove worn by baseball players. It is designed to catch and field the baseball, providing players with comfort and control during the game.',
+    category: 'sports-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/sports-accessories/baseball-glove/thumbnail.webp',
+  },
+  {
+    id: 140,
+    name: 'Basketball',
+    price: 14.99,
+    description:
+      'The Basketball is a standard ball used in basketball games. It is designed for dribbling, shooting, and passing in the game of basketball, suitable for both indoor and outdoor play.',
+    category: 'sports-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/sports-accessories/basketball/thumbnail.webp',
+  },
+  {
+    id: 141,
+    name: 'Basketball Rim',
+    price: 39.99,
+    description:
+      'The Basketball Rim is a sturdy hoop and net assembly mounted on a basketball backboard. It provides a target for shooting and scoring in the game of basketball.',
+    category: 'sports-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/sports-accessories/basketball-rim/thumbnail.webp',
+  },
+  {
+    id: 142,
+    name: 'Cricket Ball',
+    price: 12.99,
+    description:
+      'The Cricket Ball is a hard leather ball used in the sport of cricket. It is bowled and batted in the game, and its hardness and seam contribute to the dynamics of cricket play.',
+    category: 'sports-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/sports-accessories/cricket-ball/thumbnail.webp',
+  },
+  {
+    id: 143,
+    name: 'Cricket Bat',
+    price: 29.99,
+    description:
+      'The Cricket Bat is an essential piece of cricket equipment used by batsmen to hit the cricket ball. It is made of wood and comes in various sizes and designs.',
+    category: 'sports-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/sports-accessories/cricket-bat/thumbnail.webp',
+  },
+  {
+    id: 144,
+    name: 'Cricket Helmet',
+    price: 44.99,
+    description:
+      'The Cricket Helmet is a protective headgear worn by cricket players, especially batsmen and wicketkeepers. It provides protection against fast bowling and bouncers.',
+    category: 'sports-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/sports-accessories/cricket-helmet/thumbnail.webp',
+  },
+  {
+    id: 145,
+    name: 'Cricket Wicket',
+    price: 29.99,
+    description:
+      'The Cricket Wicket is a set of three stumps and two bails, forming a wicket used in the sport of cricket. Batsmen aim to protect the wicket while scoring runs.',
+    category: 'sports-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/sports-accessories/cricket-wicket/thumbnail.webp',
+  },
+  {
+    id: 146,
+    name: 'Feather Shuttlecock',
+    price: 5.99,
+    description:
+      'The Feather Shuttlecock is used in the sport of badminton. It features natural feathers and is designed for high-speed play, providing stability and accuracy during matches.',
+    category: 'sports-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/sports-accessories/feather-shuttlecock/thumbnail.webp',
+  },
+  {
+    id: 147,
+    name: 'Football',
+    price: 17.99,
+    description:
+      'The Football, also known as a soccer ball, is the standard ball used in the sport of football (soccer). It is designed for kicking and passing in the game.',
+    category: 'sports-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/sports-accessories/football/thumbnail.webp',
+  },
+  {
+    id: 148,
+    name: 'Golf Ball',
+    price: 9.99,
+    description:
+      'The Golf Ball is a small ball used in the sport of golf. It features dimples on its surface, providing aerodynamic lift and distance when struck by a golf club.',
+    category: 'sports-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/sports-accessories/golf-ball/thumbnail.webp',
+  },
+  {
+    id: 149,
+    name: 'Iron Golf',
+    price: 49.99,
+    description:
+      'The Iron Golf is a type of golf club designed for various golf shots. It features a solid metal head and is used for approach shots, chipping, and other golfing techniques.',
+    category: 'sports-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/sports-accessories/iron-golf/thumbnail.webp',
+  },
+  {
+    id: 150,
+    name: 'Metal Baseball Bat',
+    price: 29.99,
+    description:
+      'The Metal Baseball Bat is a durable and lightweight baseball bat made from metal alloys. It is commonly used in baseball games for hitting and batting practice.',
+    category: 'sports-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/sports-accessories/metal-baseball-bat/thumbnail.webp',
+  },
+  {
+    id: 151,
+    name: 'Tennis Ball',
+    price: 6.99,
+    description:
+      'The Tennis Ball is a standard ball used in the sport of tennis. It is designed for bouncing and hitting with tennis rackets during matches or practice sessions.',
+    category: 'sports-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/sports-accessories/tennis-ball/thumbnail.webp',
+  },
+  {
+    id: 152,
+    name: 'Tennis Racket',
+    price: 49.99,
+    description:
+      'The Tennis Racket is an essential piece of equipment used in the sport of tennis. It features a frame with strings and a grip, allowing players to hit the tennis ball.',
+    category: 'sports-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/sports-accessories/tennis-racket/thumbnail.webp',
+  },
+  {
+    id: 153,
+    name: 'Volleyball',
+    price: 11.99,
+    description:
+      'The Volleyball is a standard ball used in the sport of volleyball. It is designed for passing, setting, and spiking over the net during volleyball matches.',
+    category: 'sports-accessories',
+    image:
+      'https://cdn.dummyjson.com/product-images/sports-accessories/volleyball/thumbnail.webp',
+  },
+  {
+    id: 154,
+    name: 'Black Sun Glasses',
+    price: 29.99,
+    description:
+      'The Black Sun Glasses are a classic and stylish choice, featuring a sleek black frame and tinted lenses. They provide both UV protection and a fashionable look.',
+    category: 'sunglasses',
+    image:
+      'https://cdn.dummyjson.com/product-images/sunglasses/black-sun-glasses/thumbnail.webp',
+  },
+  {
+    id: 155,
+    name: 'Classic Sun Glasses',
+    price: 24.99,
+    description:
+      'The Classic Sun Glasses offer a timeless design with a neutral frame and UV-protected lenses. These sunglasses are versatile and suitable for various occasions.',
+    category: 'sunglasses',
+    image:
+      'https://cdn.dummyjson.com/product-images/sunglasses/classic-sun-glasses/thumbnail.webp',
+  },
+  {
+    id: 156,
+    name: 'Green and Black Glasses',
+    price: 34.99,
+    description:
+      'The Green and Black Glasses feature a bold combination of green and black colors, adding a touch of vibrancy to your eyewear collection. They are both stylish and eye-catching.',
+    category: 'sunglasses',
+    image:
+      'https://cdn.dummyjson.com/product-images/sunglasses/green-and-black-glasses/thumbnail.webp',
+  },
+  {
+    id: 157,
+    name: 'Party Glasses',
+    price: 19.99,
+    description:
+      "The Party Glasses are designed to add flair to your party outfit. With unique shapes or colorful frames, they're perfect for adding a playful touch to your look during celebrations.",
+    category: 'sunglasses',
+    image:
+      'https://cdn.dummyjson.com/product-images/sunglasses/party-glasses/thumbnail.webp',
+  },
+  {
+    id: 158,
+    name: 'Sunglasses',
+    price: 22.99,
+    description:
+      'The Sunglasses offer a classic and simple design with a focus on functionality. These sunglasses provide essential UV protection while maintaining a timeless look.',
+    category: 'sunglasses',
+    image:
+      'https://cdn.dummyjson.com/product-images/sunglasses/sunglasses/thumbnail.webp',
+  },
+  {
+    id: 159,
+    name: 'iPad Mini 2021 Starlight',
+    price: 499.99,
+    description:
+      'The iPad Mini 2021 in Starlight is a compact and powerful tablet from Apple. Featuring a stunning Retina display, powerful A-series chip, and a sleek design, it offers a premium tablet experience.',
+    category: 'tablets',
+    image:
+      'https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/thumbnail.webp',
+  },
+  {
+    id: 160,
+    name: 'Samsung Galaxy Tab S8 Plus Grey',
+    price: 599.99,
+    description:
+      "The Samsung Galaxy Tab S8 Plus in Grey is a high-performance Android tablet by Samsung. With a large AMOLED display, powerful processor, and S Pen support, it's ideal for productivity and entertainment.",
+    category: 'tablets',
+    image:
+      'https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/thumbnail.webp',
+  },
+  {
+    id: 161,
+    name: 'Samsung Galaxy Tab White',
+    price: 349.99,
+    description:
+      'The Samsung Galaxy Tab in White is a sleek and versatile Android tablet. With a vibrant display, long-lasting battery, and a range of features, it offers a great user experience for various tasks.',
+    category: 'tablets',
+    image:
+      'https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/thumbnail.webp',
+  },
+  {
+    id: 162,
+    name: 'Blue Frock',
+    price: 29.99,
+    description:
+      'The Blue Frock is a charming and stylish dress for various occasions. With a vibrant blue color and a comfortable design, it adds a touch of elegance to your wardrobe.',
+    category: 'tops',
+    image:
+      'https://cdn.dummyjson.com/product-images/tops/blue-frock/thumbnail.webp',
+  },
+  {
+    id: 163,
+    name: 'Girl Summer Dress',
+    price: 19.99,
+    description:
+      "The Girl Summer Dress is a cute and breezy dress designed for warm weather. With playful patterns and lightweight fabric, it's perfect for keeping cool and stylish during the summer.",
+    category: 'tops',
+    image:
+      'https://cdn.dummyjson.com/product-images/tops/girl-summer-dress/thumbnail.webp',
+  },
+  {
+    id: 164,
+    name: 'Gray Dress',
+    price: 34.99,
+    description:
+      'The Gray Dress is a versatile and chic option for various occasions. With a neutral gray color, it can be dressed up or down, making it a wardrobe staple for any fashion-forward individual.',
+    category: 'tops',
+    image:
+      'https://cdn.dummyjson.com/product-images/tops/gray-dress/thumbnail.webp',
+  },
+  {
+    id: 165,
+    name: 'Short Frock',
+    price: 24.99,
+    description:
+      'The Short Frock is a playful and trendy dress with a shorter length. Ideal for casual outings or special occasions, it combines style and comfort for a fashionable look.',
+    category: 'tops',
+    image:
+      'https://cdn.dummyjson.com/product-images/tops/short-frock/thumbnail.webp',
+  },
+  {
+    id: 166,
+    name: 'Tartan Dress',
+    price: 39.99,
+    description:
+      'The Tartan Dress features a classic tartan pattern, bringing a timeless and sophisticated touch to your wardrobe. Perfect for fall and winter, it adds a hint of traditional charm.',
+    category: 'tops',
+    image:
+      'https://cdn.dummyjson.com/product-images/tops/tartan-dress/thumbnail.webp',
+  },
+  {
+    id: 167,
+    name: '300 Touring',
+    price: 28999.99,
+    description:
+      'The 300 Touring is a stylish and comfortable sedan, known for its luxurious features and smooth performance.',
+    category: 'vehicle',
+    image:
+      'https://cdn.dummyjson.com/product-images/vehicle/300-touring/thumbnail.webp',
+  },
+  {
+    id: 168,
+    name: 'Charger SXT RWD',
+    price: 32999.99,
+    description:
+      'The Charger SXT RWD is a powerful and sporty rear-wheel-drive sedan, offering a blend of performance and practicality.',
+    category: 'vehicle',
+    image:
+      'https://cdn.dummyjson.com/product-images/vehicle/charger-sxt-rwd/thumbnail.webp',
+  },
+  {
+    id: 169,
+    name: 'Dodge Hornet GT Plus',
+    price: 24999.99,
+    description:
+      'The Dodge Hornet GT Plus is a compact and agile hatchback, perfect for urban driving with a touch of sportiness.',
+    category: 'vehicle',
+    image:
+      'https://cdn.dummyjson.com/product-images/vehicle/dodge-hornet-gt-plus/thumbnail.webp',
+  },
+  {
+    id: 170,
+    name: 'Durango SXT RWD',
+    price: 36999.99,
+    description:
+      'The Durango SXT RWD is a spacious and versatile SUV, known for its strong performance and family-friendly features.',
+    category: 'vehicle',
+    image:
+      'https://cdn.dummyjson.com/product-images/vehicle/durango-sxt-rwd/thumbnail.webp',
+  },
+  {
+    id: 171,
+    name: 'Pacifica Touring',
+    price: 31999.99,
+    description:
+      'The Pacifica Touring is a stylish and well-equipped minivan, offering comfort and convenience for family journeys.',
+    category: 'vehicle',
+    image:
+      'https://cdn.dummyjson.com/product-images/vehicle/pacifica-touring/thumbnail.webp',
+  },
+  {
+    id: 172,
+    name: "Blue Women's Handbag",
+    price: 49.99,
+    description:
+      "The Blue Women's Handbag is a stylish and spacious accessory for everyday use. With a vibrant blue color and multiple compartments, it combines fashion and functionality.",
+    category: 'womens-bags',
+    image:
+      "https://cdn.dummyjson.com/product-images/womens-bags/blue-women's-handbag/thumbnail.webp",
+  },
+  {
+    id: 173,
+    name: "Heshe Women's Leather Bag",
+    price: 129.99,
+    description:
+      "The Heshe Women's Leather Bag is a luxurious and high-quality leather bag for the sophisticated woman. With a timeless design and durable craftsmanship, it's a versatile accessory.",
+    category: 'womens-bags',
+    image:
+      "https://cdn.dummyjson.com/product-images/womens-bags/heshe-women's-leather-bag/thumbnail.webp",
+  },
+  {
+    id: 174,
+    name: 'Prada Women Bag',
+    price: 599.99,
+    description:
+      "The Prada Women Bag is an iconic designer bag that exudes elegance and luxury. Crafted with precision and featuring the Prada logo, it's a statement piece for fashion enthusiasts.",
+    category: 'womens-bags',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-bags/prada-women-bag/thumbnail.webp',
+  },
+  {
+    id: 175,
+    name: 'White Faux Leather Backpack',
+    price: 39.99,
+    description:
+      "The White Faux Leather Backpack is a trendy and practical backpack for the modern woman. With a sleek white design and ample storage space, it's perfect for both casual and on-the-go styles.",
+    category: 'womens-bags',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-bags/white-faux-leather-backpack/thumbnail.webp',
+  },
+  {
+    id: 176,
+    name: 'Women Handbag Black',
+    price: 59.99,
+    description:
+      "The Women Handbag in Black is a classic and versatile accessory that complements various outfits. With a timeless black color and functional design, it's a must-have in every woman's wardrobe.",
+    category: 'womens-bags',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-bags/women-handbag-black/thumbnail.webp',
+  },
+  {
+    id: 177,
+    name: "Black Women's Gown",
+    price: 129.99,
+    description:
+      "The Black Women's Gown is an elegant and timeless evening gown. With a sleek black design, it's perfect for formal events and special occasions, exuding sophistication and style.",
+    category: 'womens-dresses',
+    image:
+      "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/thumbnail.webp",
+  },
+  {
+    id: 178,
+    name: 'Corset Leather With Skirt',
+    price: 89.99,
+    description:
+      'The Corset Leather With Skirt is a bold and edgy ensemble that combines a stylish corset with a matching skirt. Ideal for fashion-forward individuals, it makes a statement at any event.',
+    category: 'womens-dresses',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-dresses/corset-leather-with-skirt/thumbnail.webp',
+  },
+  {
+    id: 179,
+    name: 'Corset With Black Skirt',
+    price: 79.99,
+    description:
+      'The Corset With Black Skirt is a chic and versatile outfit that pairs a fashionable corset with a classic black skirt. It offers a trendy and coordinated look for various occasions.',
+    category: 'womens-dresses',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-dresses/corset-with-black-skirt/thumbnail.webp',
+  },
+  {
+    id: 180,
+    name: 'Dress Pea',
+    price: 49.99,
+    description:
+      'The Dress Pea is a stylish and comfortable dress with a pea pattern. Perfect for casual outings, it adds a playful and fun element to your wardrobe, making it a great choice for day-to-day wear.',
+    category: 'womens-dresses',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-dresses/dress-pea/thumbnail.webp',
+  },
+  {
+    id: 181,
+    name: 'Marni Red & Black Suit',
+    price: 179.99,
+    description:
+      'The Marni Red & Black Suit is a sophisticated and fashion-forward suit ensemble. With a combination of red and black tones, it showcases a modern design for a bold and confident look.',
+    category: 'womens-dresses',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-dresses/marni-red-&-black-suit/thumbnail.webp',
+  },
+  {
+    id: 182,
+    name: 'Green Crystal Earring',
+    price: 29.99,
+    description:
+      'The Green Crystal Earring is a dazzling accessory that features a vibrant green crystal. With a classic design, it adds a touch of elegance to your ensemble, perfect for formal or special occasions.',
+    category: 'womens-jewellery',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-jewellery/green-crystal-earring/thumbnail.webp',
+  },
+  {
+    id: 183,
+    name: 'Green Oval Earring',
+    price: 24.99,
+    description:
+      'The Green Oval Earring is a stylish and versatile accessory with a unique oval shape. Whether for casual or dressy occasions, its green hue and contemporary design make it a standout piece.',
+    category: 'womens-jewellery',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-jewellery/green-oval-earring/thumbnail.webp',
+  },
+  {
+    id: 184,
+    name: 'Tropical Earring',
+    price: 19.99,
+    description:
+      "The Tropical Earring is a fun and playful accessory inspired by tropical elements. Featuring vibrant colors and a lively design, it's perfect for adding a touch of summer to your look.",
+    category: 'womens-jewellery',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-jewellery/tropical-earring/thumbnail.webp',
+  },
+  {
+    id: 185,
+    name: 'Black & Brown Slipper',
+    price: 19.99,
+    description:
+      'The Black & Brown Slipper is a comfortable and stylish choice for casual wear. Featuring a blend of black and brown colors, it adds a touch of sophistication to your relaxation.',
+    category: 'womens-shoes',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-shoes/black-&-brown-slipper/thumbnail.webp',
+  },
+  {
+    id: 186,
+    name: 'Calvin Klein Heel Shoes',
+    price: 79.99,
+    description:
+      'Calvin Klein Heel Shoes are elegant and sophisticated, designed for formal occasions. With a classic design and high-quality materials, they complement your stylish ensemble.',
+    category: 'womens-shoes',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-shoes/calvin-klein-heel-shoes/thumbnail.webp',
+  },
+  {
+    id: 187,
+    name: 'Golden Shoes Woman',
+    price: 49.99,
+    description:
+      'The Golden Shoes for Women are a glamorous choice for special occasions. Featuring a golden hue and stylish design, they add a touch of luxury to your outfit.',
+    category: 'womens-shoes',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-shoes/golden-shoes-woman/thumbnail.webp',
+  },
+  {
+    id: 188,
+    name: 'Pampi Shoes',
+    price: 29.99,
+    description:
+      'Pampi Shoes offer a blend of comfort and style for everyday use. With a versatile design, they are suitable for various casual occasions, providing a trendy and relaxed look.',
+    category: 'womens-shoes',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/thumbnail.webp',
+  },
+  {
+    id: 189,
+    name: 'Red Shoes',
+    price: 34.99,
+    description:
+      'The Red Shoes make a bold statement with their vibrant red color. Whether for a party or a casual outing, these shoes add a pop of color and style to your wardrobe.',
+    category: 'womens-shoes',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-shoes/red-shoes/thumbnail.webp',
+  },
+  {
+    id: 190,
+    name: 'IWC Ingenieur Automatic Steel',
+    price: 4999.99,
+    description:
+      'The IWC Ingenieur Automatic Steel watch is a durable and sophisticated timepiece. With a stainless steel case and automatic movement, it combines precision and style for watch enthusiasts.',
+    category: 'womens-watches',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-watches/iwc-ingenieur-automatic-steel/thumbnail.webp',
+  },
+  {
+    id: 191,
+    name: 'Rolex Cellini Moonphase',
+    price: 15999.99,
+    description:
+      'The Rolex Cellini Moonphase watch is a masterpiece of horology. Featuring a moon phase complication, it showcases the craftsmanship and elegance that Rolex is renowned for.',
+    category: 'womens-watches',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-watches/rolex-cellini-moonphase/thumbnail.webp',
+  },
+  {
+    id: 192,
+    name: 'Rolex Datejust Women',
+    price: 10999.99,
+    description:
+      "The Rolex Datejust Women's watch is an iconic timepiece designed for women. With a timeless design and a date complication, it offers both elegance and functionality.",
+    category: 'womens-watches',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-watches/rolex-datejust-women/thumbnail.webp',
+  },
+  {
+    id: 193,
+    name: 'Watch Gold for Women',
+    price: 799.99,
+    description:
+      "The Gold Women's Watch is a stunning accessory that combines luxury and style. Featuring a gold-plated case and a chic design, it adds a touch of glamour to any outfit.",
+    category: 'womens-watches',
+    image:
+      'https://cdn.dummyjson.com/product-images/womens-watches/watch-gold-for-women/thumbnail.webp',
+  },
+  {
+    id: 194,
+    name: "Women's Wrist Watch",
+    price: 129.99,
+    description:
+      "The Women's Wrist Watch is a versatile and fashionable timepiece for everyday wear. With a comfortable strap and a simple yet elegant design, it complements various styles.",
+    category: 'womens-watches',
+    image:
+      "https://cdn.dummyjson.com/product-images/womens-watches/women's-wrist-watch/thumbnail.webp",
+  },
+];

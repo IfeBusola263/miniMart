@@ -9,7 +9,7 @@ import Toast from 'react-native-toast-message';
 import {colors} from '../../utils/colors';
 
 type ToastProps = {
-  text: string;
+  text?: string;
 };
 
 const CustomToast = ({text}: ToastProps) => {

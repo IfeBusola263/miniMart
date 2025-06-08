@@ -19,8 +19,6 @@ const Header = () => {
     setIsHome(false);
   }, [name]);
 
-  // console.log(route.name);
-
   const handleFocus = useCallback(() => {
     if (inputRef.current) {
       inputRef.current.focus();

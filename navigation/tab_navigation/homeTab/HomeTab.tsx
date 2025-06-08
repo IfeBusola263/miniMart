@@ -13,8 +13,9 @@ import {
 } from '@hugeicons/core-free-icons';
 import {colors} from '../../../utils/colors';
 import {useAppSelector} from '../../../hooks/sliceHooks';
+import {TabParamList} from '../../types';
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator<TabParamList>();
 
 type tabBarIconProps = {
   focused: boolean;
@@ -35,6 +36,10 @@ const renderProfileIcon = ({focused}: tabBarIconProps) => (
 
 const HomeTab = () => {
   const {items} = useAppSelector(state => state.cart);
+  const cartCount = items.reduce((count, item) => {
+    return count + item.quantity;
+  }, 0);
+
   return (
     <Tab.Navigator
       screenOptions={{
@@ -64,7 +69,7 @@ const HomeTab = () => {
         component={CartScreen}
         options={{
           tabBarIcon: renderCartIcon,
-          tabBarBadge: items.length,
+          tabBarBadge: cartCount,
           tabBarBadgeStyle: {
             backgroundColor: '#3C4856',
             fontFamily: 'IBMPlexSans-Bold',
