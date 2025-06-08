@@ -34,28 +34,40 @@ MiniMart is a mobile shopping experience demo app built with React Native. It sh
 ```bash
 git clone <your-repo-url>
 cd minimart
+```
 
 ### 2. Install dependencies
+```bash
 yarn install
+```
 # or
+```bash
 npm install
-
+```
 
 ### 3. Run on Android
 # Ensure an Android emulator is running or a device is connected via USB.
+```bash
 yarn android
+```
 # or
+```bash
 npm run android
+```
 
 ### 4. Run on iOS (macOS only)
 # Requires Xcode and an iOS simulator or device.
+```bash
 yarn ios
+```
 # or
+```bash
 npm run ios
+```
 
 
 
-- Key Features
+## Key Features
 
 - Smooth Bottom Tab Navigation
 - Product list with real-time state updates
