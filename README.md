@@ -75,3 +75,30 @@ npm run ios
 - Responsive icon integration (Hugeicons & FontAwesome)
 - User feedback via toast messages
 - Modular folder and component structure
+
+
+## 📸 Screenshots
+
+### 🏠 Home Screen
+
+<div align="center">
+  <img src="./assets/screenshots/HomePage.png" alt="Home Screen" width="250"/>
+</div>
+
+---
+
+### 🛍️ Product Details
+
+<div align="center">
+  <img src="./assets/screenshots/ViewProduct.png" alt="View Product" width="250" style="margin: 10px;"  />
+  <img src="./assets/screenshots/ItemAddedToCart.png" alt="Item Added To Cart" width="250" style="margin: 10px;"  />
+  <img src="./assets/screenshots/AddItemToCartWithToast.png" alt="Add Item To Cart With Toast" width="250" style="margin: 10px;"  />
+</div>
+
+---
+
+### 🛒 Cart
+
+<div align="center">
+  <img src="./assets/screenshots/Cart.png" alt="Cart Screen" width="250"/>
+</div>
